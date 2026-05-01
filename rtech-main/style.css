@@ -344,32 +344,41 @@ html {
     opacity: 0.1;
     border-radius: 50% 0 0 0;
 }
+
+/* Portfolio Layout (Img Left, Text/Skills/Certs Right) */
 .about-grid {
     display: grid;
     grid-template-columns: 350px 1fr;
     gap: 6rem;
-    align-items: center;
+    align-items: flex-start;
 }
 .about-img-box {
     position: relative;
     width: 100%;
+    max-width: 350px;
     aspect-ratio: 1/1;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+    position: sticky;
+    top: 120px;
 }
 .image-blob-bg {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--main-light), #3ddbd9);
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    background: linear-gradient(135deg, var(--main-color), #3ddbd9);
+    border-radius: 50% 50% 50% 50% / 60% 40% 70% 30%;
     z-index: 1;
+    transform: scale(0.95) translate(-5%, 5%);
 }
 .about-img-box img {
     position: relative;
     z-index: 2;
     width: 85%;
+    height: 85%;
+    object-fit: cover;
     border-radius: 50%;
     border: 8px solid var(--bg-color);
     box-shadow: var(--shadow);
@@ -393,9 +402,11 @@ html {
     margin-bottom: 2rem;
     line-height: 1.6;
 }
+
+/* Polished Skills Grid */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 1.5rem;
     margin-top: 3rem;
 }
@@ -407,15 +418,96 @@ html {
     box-shadow: var(--shadow);
     border: 1px solid var(--border-color);
     transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 .skill-card i {
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: var(--main-color);
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 }
 .skill-card h4 {
     font-size: 1.4rem;
+    font-weight: 600;
 }
+
+/* --- Certifications Section (Nested & Side-by-Side) --- */
+.certifications-section {
+    margin-top: 4.5rem; 
+}
+.cert-heading {
+    font-size: 2.2rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+.cert-heading span {
+    color: var(--main-color);
+}
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2rem; 
+}
+.cert-card {
+    background: var(--card-bg);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    width: 100%;
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.cert-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--main-color);
+}
+.cert-img-wrapper {
+    width: 100%;
+    height: 180px; 
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
+    background: #f8fafc; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body.dark-mode .cert-img-wrapper {
+    background: #0a0e17;
+}
+.cert-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    padding: 1rem; 
+    transition: 0.5s ease;
+}
+.cert-card:hover .cert-img-wrapper img {
+    transform: scale(1.05);
+}
+.cert-info {
+    padding: 2rem;
+    text-align: left; 
+}
+.cert-info h4 {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.cert-info p {
+    font-size: 1.3rem;
+    color: var(--p-color);
+    line-height: 1.5;
+}
+
+
+/* Projects */
 .projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -470,6 +562,8 @@ html {
     gap: 0.5rem;
 }
 .view-link:hover { text-decoration: underline; color: var(--accent-color); }
+
+/* Apps / Coming Soon */
 .coming-soon-box {
     background: var(--header-bg);
     backdrop-filter: blur(5px);
@@ -503,6 +597,8 @@ html {
     color: var(--p-color);
     line-height: 1.6;
 }
+
+/* Contact */
 .contact-container {
     max-width: 700px;
     margin: 0 auto;
@@ -549,10 +645,13 @@ html {
 .contact-form .btn-primary {
     align-self: flex-start;
 }
+
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
 }
+
+/* Footer */
 .mega-footer {
     background: #0a0e17;
     color: #fff;
@@ -626,6 +725,7 @@ html {
     color: #94a3b8;
     transition: 0.3s;
     display: inline-block;
+    cursor: pointer;
 }
 .footer-col ul li a:hover {
     color: #0f62fe;
@@ -672,6 +772,8 @@ html {
 .footer-bottom-links a:hover {
     color: #fff;
 }
+
+/* Modals */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -746,6 +848,8 @@ html {
     line-height: 1.7;
     margin-bottom: 1.5rem;
 }
+
+/* Responsiveness */
 @media (max-width: 1024px) {
     .header { position: relative; flex-direction: column; padding: 2rem 5%; gap: 2rem; }
     .header-left { flex-direction: column; align-items: center; width: 100%; gap: 1.5rem; }
@@ -756,7 +860,8 @@ html {
     .static-intro { justify-content: center; }
     .hero-actions { justify-content: center; flex-wrap: wrap; }
     .about-grid { grid-template-columns: 1fr; text-align: center; }
-    .about-img-box { max-width: 300px; margin: 0 auto; }
+    .about-img-box { max-width: 300px; margin: 0 auto; position: relative; top: 0; }
+    .cert-info { text-align: center; }
     .footer-container { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 768px) {
@@ -765,4 +870,5 @@ html {
     .contact-form .input-box { flex-direction: column; gap: 0; }
     .contact-form .input-box input { width: 100%; margin-bottom: 2rem; }
     .modal-content { padding: 3rem; }
+    .cert-grid { grid-template-columns: 1fr; } /* Stacks certificates nicely on mobile */
 }

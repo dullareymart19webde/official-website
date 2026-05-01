@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rtech | Digital Portfolio</title>
+    <title>VERTEX | Digital Portfolio</title>
     <link rel="icon" type="image/png" href="logo-vertexx.png">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
     <header class="header">
         <div class="header-left">
             <div class="logo-box">
-                <img src="logo-vertexx.png" alt="rtech logo" class="header-logo-img">
+                <img src="logo-vertexx.png" alt="VERTEX logo" class="header-logo-img">
                 <span class="logo">VERTEX<span>.</span></span>
             </div>
             <nav class="tab-nav">
@@ -34,6 +34,7 @@
         </div>
     </header>
     <main class="main-content">
+        <!-- HOME TAB -->
         <section id="home" class="tab-content active">
             <div class="home-grid-wrapper">
                 <div class="home-text">
@@ -64,6 +65,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- DIGITAL PORTFOLIO TAB -->
         <section id="portfolio" class="tab-content">
             <div class="section-header">
                 <h2 class="heading">Digital <span>Portfolio</span></h2>
@@ -78,15 +81,44 @@
                     <h3>Rey Mart Dulla <br><span>Software Developer & IT Student</span></h3>
                     <p>I am currently a proud student at <b>Torres Capitol College (TCC)</b>. My journey into tech began with simple coding challenges and has evolved into building full-scale applications.</p>
                     <p>Beyond the code, I am a problem solver at heart. Whether it's debugging a complex algorithm or refining a pixel-perfect user interface, I enjoy the process of continuous improvement.</p>
+                    
                     <div class="skills-grid">
                         <div class="skill-card"><i class="fab fa-html5"></i><h4>HTML/CSS</h4></div>
                         <div class="skill-card"><i class="fab fa-js"></i><h4>JavaScript</h4></div>
                         <div class="skill-card"><i class="fab fa-python"></i><h4>Python</h4></div>
                         <div class="skill-card"><i class="fab fa-java"></i><h4>Java</h4></div>
                     </div>
+
+                    <!-- CERTIFICATIONS SECTION (Aligned neatly under the bio/skills) -->
+                    <div class="certifications-section">
+                        <h3 class="cert-heading">Professional <span>Certifications</span></h3>
+                        <div class="cert-grid">
+                            <div class="cert-card">
+                                <div class="cert-img-wrapper">
+                                    <img src="img/ICT-Days.jpg" alt="ICT Days Certificate">
+                                </div>
+                                <div class="cert-info">
+                                    <h4>ICT Days</h4>
+                                    <p>Information & Communications Technology</p>
+                                </div>
+                            </div>
+                            <div class="cert-card">
+                                <div class="cert-img-wrapper">
+                                    <img src="img/Seminar-Workshop 2026 E-Certificate.jpg" alt="Seminar Workshop 2026">
+                                </div>
+                                <div class="cert-info">
+                                    <h4>Seminar & Workshop 2026</h4>
+                                    <p>Technical Skills Development</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
+
+        <!-- WEBSITES TAB -->
         <section id="websites" class="tab-content">
             <div class="section-header">
                 <h2 class="heading">Developed <span>Websites</span></h2>
@@ -105,6 +137,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- APPS TAB -->
         <section id="apps" class="tab-content">
             <div class="section-header">
                 <h2 class="heading">Software & <span>Apps</span></h2>
@@ -116,6 +150,8 @@
                 <p>I am currently refining my software projects and packaging new desktop applications. Check back soon for downloadable tools and systems!</p>
             </div>
         </section>
+
+        <!-- CONTACT TAB -->
         <section id="contact" class="tab-content">
             <div class="section-header">
                 <h2 class="heading">Get In <span>Touch</span></h2>
@@ -136,11 +172,12 @@
             </div>
         </section>
     </main>
+
     <footer class="mega-footer">
         <div class="footer-container">
             <div class="footer-col brand-col">
                 <div class="footer-logo">
-                    <span class="logo">rtech<span>.</span></span>
+                    <span class="logo">VERTEX<span>.</span></span>
                 </div>
                 <p>Providing quality digital solutions and fostering innovation to empower the next generation of web and software platforms.</p>
                 <div class="footer-socials">
@@ -165,7 +202,7 @@
                     <li><a href="#" onclick="switchTab('websites')">Websites</a></li>
                     <li><a href="#" onclick="switchTab('apps')">Desktop Apps</a></li>
                     <li><a href="https://github.com/dullareymart19webde" target="_blank">Source Codes</a></li>
-                    <li><a href="#">Certifications</a></li>
+                    <li><a href="javascript:void(0);" onclick="switchTab('portfolio')">Certifications</a></li>
                 </ul>
             </div>
             <div class="footer-col contact-col">
@@ -187,7 +224,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 rtech | Rey Mart Dulla. All Rights Reserved.</p>
+            <p>&copy; 2026 VERTEX | Rey Mart Dulla. All Rights Reserved.</p>
             <div class="footer-bottom-links">
                 <a href="javascript:void(0);" onclick="openModal('privacy-modal')">Privacy Policy</a>
                 <a href="javascript:void(0);" onclick="openModal('terms-modal')">Terms of Service</a>
@@ -195,12 +232,13 @@
         </div>
     </footer>
 
+    <!-- Privacy Policy Modal -->
     <div id="privacy-modal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('privacy-modal')"><i class='bx bx-x'></i></button>
             <h2>Privacy Policy</h2>
             <p><strong>Last Updated: April 2026</strong></p>
-            <p>Welcome to rtech. Your privacy is important to me. This policy outlines how your information is handled when you visit my digital portfolio.</p>
+            <p>Welcome to VERTEX. Your privacy is important to me. This policy outlines how your information is handled when you visit my digital portfolio.</p>
             
             <h3>1. Information Collection</h3>
             <p>I only collect personal information that you voluntarily provide when using the "Get In Touch" contact form. This includes your Name, Email Address, and the contents of your message.</p>
@@ -219,12 +257,13 @@
         </div>
     </div>
     
+    <!-- Terms of Service Modal -->
     <div id="terms-modal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('terms-modal')"><i class='bx bx-x'></i></button>
             <h2>Terms of Service</h2>
             <p><strong>Last Updated: April 2026</strong></p>
-            <p>By accessing and using the rtech digital portfolio, you accept and agree to be bound by the terms and provision of this agreement.</p>
+            <p>By accessing and using the VERTEX digital portfolio, you accept and agree to be bound by the terms and provision of this agreement.</p>
             
             <h3>1. Intellectual Property</h3>
             <p>All content on this website, including text, graphics, logos, images, and software (such as downloadable applications and source codes), is the property of Rey Mart Dulla and is protected by intellectual property laws. You may view and download materials for personal, non-commercial evaluation purposes only.</p>
