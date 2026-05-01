@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rtech | Digital Portfolio</title>
+    <link rel="icon" type="image/png" href="logo-vertexx.png">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="bg-shape shape-left"></div>
+    <div class="bg-shape shape-right"></div>
+    <header class="header">
+        <div class="header-left">
+            <div class="logo-box">
+                <img src="logo.png" alt="rtech logo" class="header-logo-img">
+                <span class="logo">VERTEX<span>.</span></span>
+            </div>
+            <nav class="tab-nav">
+                <button class="tab-link active" data-target="home" onclick="switchTab('home')">Home</button>
+                <button class="tab-link" data-target="portfolio" onclick="switchTab('portfolio')">Digital Portfolio</button>
+                <button class="tab-link" data-target="websites" onclick="switchTab('websites')">Websites</button>
+                <button class="tab-link" data-target="apps" onclick="switchTab('apps')">Apps</button>
+                <button class="tab-link" data-target="contact" onclick="switchTab('contact')">Contact</button>
+            </nav>
+        </div>
+        <div class="header-right">
+            <button id="theme-toggle" class="theme-btn"><i class='bx bx-moon'></i></button>
+            <a href="https://web.facebook.com/rey.mart.dulla.683911" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="mailto:reymartdulla17@gmail.com"><i class='bx bx-envelope'></i></a>
+            <a href="my-cv.pdf" download class="btn-outline">Download CV</a>
+        </div>
+    </header>
+    <main class="main-content">
+        <section id="home" class="tab-content active">
+            <div class="home-grid-wrapper">
+                <div class="home-text">
+                    <h3 class="static-intro">Rey Mart Dulla <span class="logo-sub">Software Developer</span></h3>
+                    <h1>Engineering Smart <span class="text-highlight">Digital Solutions.</span></h1>
+                    <p>Combining backend reliability with frontend clarity. I build responsive web platforms and efficient desktop applications tailored for real-world problem-solving.</p>
+                    <div class="hero-actions">
+                        <button class="btn-primary" onclick="switchTab('portfolio')">Explore Portfolio</button>
+                        <div class="play-btn-box" onclick="switchTab('websites')">
+                            <div class="play-btn"><i class='bx bx-code-alt'></i></div>
+                            <span>Live Projects</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="home-hero-comp">
+                    <div class="tech-stack-card">
+                        <h4 class="card-heading">Tech Stack Glance</h4>
+                        <div class="tech-icons">
+                            <i class="fab fa-python"></i>
+                            <i class="fab fa-js"></i>
+                            <i class="fab fa-java"></i>
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <p>Actively developing web solutions and backend desktop applications.</p>
+                        <div class="card-accent"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio" class="tab-content">
+            <div class="section-header">
+                <h2 class="heading">Digital <span>Portfolio</span></h2>
+                <p>A look into my skills and educational background.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-img-box">
+                    <div class="image-blob-bg"></div>
+                    <img src="Profile.png" alt="Rey Mart Dulla">
+                </div>
+                <div class="about-text">
+                    <h3>Rey Mart Dulla <br><span>Software Developer & IT Student</span></h3>
+                    <p>I am currently a proud student at <b>Torres Capitol College (TCC)</b>. My journey into tech began with simple coding challenges and has evolved into building full-scale applications.</p>
+                    <p>Beyond the code, I am a problem solver at heart. Whether it's debugging a complex algorithm or refining a pixel-perfect user interface, I enjoy the process of continuous improvement.</p>
+                    <div class="skills-grid">
+                        <div class="skill-card"><i class="fab fa-html5"></i><h4>HTML/CSS</h4></div>
+                        <div class="skill-card"><i class="fab fa-js"></i><h4>JavaScript</h4></div>
+                        <div class="skill-card"><i class="fab fa-python"></i><h4>Python</h4></div>
+                        <div class="skill-card"><i class="fab fa-java"></i><h4>Java</h4></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="websites" class="tab-content">
+            <div class="section-header">
+                <h2 class="heading">Developed <span>Websites</span></h2>
+                <p>Live web platforms and responsive designs I have built.</p>
+            </div>
+            <div class="projects-container">
+                <div class="project-card">
+                    <div class="img-wrapper"><img src="evote.png" alt="Online Voting System"></div>
+                    <div class="project-info">
+                        <h4>Online Voting System (E-Vote)</h4>
+                        <p>A secure, fully functional web-based electronic voting platform. Designed to handle user authentication and reliable vote casting.</p>
+                        <a href="http://official-evote.rf.gd" target="_blank" class="view-link">
+                            Visit official-evote.rf.gd <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="apps" class="tab-content">
+            <div class="section-header">
+                <h2 class="heading">Software & <span>Apps</span></h2>
+                <p>Downloadable desktop applications and systems.</p>
+            </div>
+            <div class="coming-soon-box">
+                <i class='bx bx-code-block'></i>
+                <h3>Update in Progress</h3>
+                <p>I am currently refining my software projects and packaging new desktop applications. Check back soon for downloadable tools and systems!</p>
+            </div>
+        </section>
+        <section id="contact" class="tab-content">
+            <div class="section-header">
+                <h2 class="heading">Get In <span>Touch</span></h2>
+                <p>Have a project in mind or want to collaborate? Send me a message.</p>
+            </div>
+            <div class="contact-container">
+                <form action="https://formspree.io/f/xgoppbel" method="POST" class="contact-form">
+                    <div class="input-box">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="subject" placeholder="Email Subject" required>
+                    </div>
+                    <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="mega-footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <div class="footer-logo">
+                    <span class="logo">rtech<span>.</span></span>
+                </div>
+                <p>Providing quality digital solutions and fostering innovation to empower the next generation of web and software platforms.</p>
+                <div class="footer-socials">
+                    <a href="https://web.facebook.com/rey.mart.dulla.683911" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/dullareymart19webde" target="_blank"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#" onclick="switchTab('portfolio')">My History</a></li>
+                    <li><a href="#" onclick="switchTab('portfolio')">Education</a></li>
+                    <li><a href="#" onclick="switchTab('portfolio')">Tech Stack</a></li>
+                    <li><a href="my-cv.pdf" download>Resume / CV</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Important Links</h4>
+                <ul>
+                    <li><a href="#" onclick="switchTab('websites')">Websites</a></li>
+                    <li><a href="#" onclick="switchTab('apps')">Desktop Apps</a></li>
+                    <li><a href="https://github.com/dullareymart19webde" target="_blank">Source Codes</a></li>
+                    <li><a href="#">Certifications</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-col">
+                <h4>Get In Touch</h4>
+                <ul>
+                    <li>
+                        <i class='bx bx-map'></i>
+                        <span>Quezon, Bukidnon, Philippines</span>
+                    </li>
+                    <li>
+                        <i class='bx bx-phone'></i>
+                        <span>+63 966 025 8776</span>
+                    </li>
+                    <li>
+                        <i class='bx bx-envelope'></i>
+                        <span>reymartdulla17@gmail.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 rtech | Rey Mart Dulla. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="javascript:void(0);" onclick="openModal('privacy-modal')">Privacy Policy</a>
+                <a href="javascript:void(0);" onclick="openModal('terms-modal')">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="privacy-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('privacy-modal')"><i class='bx bx-x'></i></button>
+            <h2>Privacy Policy</h2>
+            <p><strong>Last Updated: April 2026</strong></p>
+            <p>Welcome to rtech. Your privacy is important to me. This policy outlines how your information is handled when you visit my digital portfolio.</p>
+            
+            <h3>1. Information Collection</h3>
+            <p>I only collect personal information that you voluntarily provide when using the "Get In Touch" contact form. This includes your Name, Email Address, and the contents of your message.</p>
+            
+            <h3>2. Use of Information</h3>
+            <p>The information collected through the contact form is used strictly for the purpose of responding to your inquiries, professional communication, or discussing potential collaborations.</p>
+            
+            <h3>3. Third-Party Services</h3>
+            <p>This website utilizes Formspree.io to process contact form submissions securely. Formspree may capture standard web data necessary for routing your message. I do not sell, trade, or otherwise transfer your personal information to outside parties.</p>
+            
+            <h3>4. Data Security</h3>
+            <p>While I strive to use commercially acceptable means to protect your personal information submitted via the contact form, please remember that no method of transmission over the Internet is 100% secure.</p>
+            
+            <h3>5. Contact</h3>
+            <p>If you have any questions regarding this Privacy Policy, you may contact me directly at reymartdulla17@gmail.com.</p>
+        </div>
+    </div>
+    
+    <div id="terms-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('terms-modal')"><i class='bx bx-x'></i></button>
+            <h2>Terms of Service</h2>
+            <p><strong>Last Updated: April 2026</strong></p>
+            <p>By accessing and using the rtech digital portfolio, you accept and agree to be bound by the terms and provision of this agreement.</p>
+            
+            <h3>1. Intellectual Property</h3>
+            <p>All content on this website, including text, graphics, logos, images, and software (such as downloadable applications and source codes), is the property of Rey Mart Dulla and is protected by intellectual property laws. You may view and download materials for personal, non-commercial evaluation purposes only.</p>
+            
+            <h3>2. User Conduct</h3>
+            <p>The contact form provided on this website is intended for professional inquiries. You agree not to use this form to transmit any spam, malicious code, or harassing communications.</p>
+            
+            <h3>3. Disclaimer of Warranties</h3>
+            <p>The downloadable desktop applications, web platforms, and source codes featured on this portfolio are provided "as is" for demonstration and educational purposes. While I strive for excellence, I make no warranties regarding the flawless operation of these software projects across all environments.</p>
+            
+            <h3>4. External Links</h3>
+            <p>This portfolio contains links to external websites, including GitHub and live project platforms. I am not responsible for the content or privacy practices of these external sites.</p>
+            
+            <h3>5. Modifications</h3>
+            <p>I reserve the right to modify these terms at any time without prior notice. Your continued use of the website following any changes signifies your acceptance of the revised terms.</p>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tabId) {
+            let tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            let tabLinks = document.getElementsByClassName("tab-link");
+            for (let i = 0; i < tabLinks.length; i++) {
+                tabLinks[i].classList.remove("active");
+            }
+            document.getElementById(tabId).classList.add("active");
+            let targetLink = document.querySelector(`.tab-link[data-target="${tabId}"]`);
+            if (targetLink) {
+                targetLink.classList.add("active");
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
+        const body = document.body;
+
+        try {
+            if (localStorage.getItem('theme') === 'dark') {
+                body.classList.add('dark-mode');
+                themeIcon.classList.replace('bx-moon', 'bx-sun');
+            }
+        } catch(e) {}
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            
+            if (isDark) {
+                themeIcon.classList.replace('bx-moon', 'bx-sun');
+            } else {
+                themeIcon.classList.replace('bx-sun', 'bx-moon');
+            }
+
+            try {
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            } catch(e) {}
+        });
+    </script>
+</body>
+</html>
