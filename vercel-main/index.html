@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VERTEX | Digital Portfolio</title>
+    
+    <!-- SEO & Open Graph Meta Tags -->
+    <meta name="description" content="Rey Mart Dulla is a Software Developer specializing in building smart digital solutions, responsive web platforms, and efficient desktop applications.">
+    <meta name="keywords" content="Software Developer, Web Developer, Freelance Developer, Rey Mart Dulla, VERTEX, Philippines, Web Design">
+    <meta property="og:title" content="VERTEX | Digital Portfolio">
+    <meta property="og:description" content="Engineering Smart Digital Solutions. Hire Rey Mart for web and software development.">
+    <meta property="og:image" content="img/logo-vertexx.png">
+    <meta property="og:type" content="website">
+
     <link rel="icon" type="image/png" href="logo-vertexx.png">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -15,7 +24,7 @@
     <header class="header">
         <div class="header-left">
             <div class="logo-box">
-                <img src="logo-vertexx.png" alt="VERTEX logo" class="header-logo-img">
+                <img src="img/logo-vertexx.png" alt="VERTEX logo" class="header-logo-img">
                 <span class="logo">VERTEX<span>.</span></span>
             </div>
             <nav class="tab-nav">
@@ -58,6 +67,7 @@
                             <i class="fab fa-java"></i>
                             <i class="fab fa-html5"></i>
                             <i class="fab fa-css3-alt"></i>
+                            <i class="fab fa-php"></i>
                         </div>
                         <p>Actively developing web solutions and backend desktop applications.</p>
                         <div class="card-accent"></div>
@@ -75,7 +85,7 @@
             <div class="about-grid">
                 <div class="about-img-box">
                     <div class="image-blob-bg"></div>
-                    <img src="Profile.png" alt="Rey Mart Dulla">
+                    <img src="img/Profile.png" alt="Rey Mart Dulla">
                 </div>
                 <div class="about-text">
                     <h3>Rey Mart Dulla <br><span>Software Developer & IT Student</span></h3>
@@ -87,6 +97,9 @@
                         <div class="skill-card"><i class="fab fa-js"></i><h4>JavaScript</h4></div>
                         <div class="skill-card"><i class="fab fa-python"></i><h4>Python</h4></div>
                         <div class="skill-card"><i class="fab fa-java"></i><h4>Java</h4></div>
+                        <div class="skill-card"><i class="fab fa-php"></i><h4>PHP</h4></div>
+                        <div class="skill-card"><i class="fas fa-database"></i><h4>MySQL & Firebase</h4></div>
+                        <div class="skill-card"><i class="fas fa-laptop-code"></i><h4>VS Code & Visual Studio</h4></div>
                     </div>
 
                     <!-- CERTIFICATIONS SECTION (Aligned neatly under the bio/skills) -->
@@ -126,12 +139,22 @@
             </div>
             <div class="projects-container">
                 <div class="project-card">
-                    <div class="img-wrapper"><img src="evote.png" alt="Online Voting System"></div>
+                    <div class="img-wrapper"><img src="img/evote.png" alt="Online Voting System"></div>
                     <div class="project-info">
                         <h4>Online Voting System (E-Vote)</h4>
                         <p>A secure, fully functional web-based electronic voting platform. Designed to handle user authentication and reliable vote casting.</p>
-                        <a href="http://official-evote.rf.gd" target="_blank" class="view-link">
-                            Visit official-evote.rf.gd <i class='bx bx-link-external'></i>
+                        <a href="javascript:void(0);" onclick="openModal('evote-modal')" class="view-link">
+                            View Case Study <i class='bx bx-right-arrow-alt'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="img-wrapper"><img src="img/el-roi.jpg" alt="El Roi Christian Academy"></div>
+                    <div class="project-info">
+                        <h4>El Roi Christian Academy (ERCA)</h4>
+                        <p>An official web platform developed for El Roi Christian Academy, providing information on educational programs, admissions, and the latest updates for students and parents.</p>
+                        <a href="javascript:void(0);" onclick="openModal('elroi-modal')" class="view-link">
+                            View Case Study <i class='bx bx-right-arrow-alt'></i>
                         </a>
                     </div>
                 </div>
@@ -281,6 +304,54 @@
             <p>I reserve the right to modify these terms at any time without prior notice. Your continued use of the website following any changes signifies your acceptance of the revised terms.</p>
         </div>
     </div>
+
+    <!-- E-Vote Case Study Modal -->
+    <div id="evote-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('evote-modal')"><i class='bx bx-x'></i></button>
+            <h2>Online Voting System (E-Vote)</h2>
+            
+            <h3>The Challenge</h3>
+            <p>Traditional voting methods often face issues with manual counting errors and accessibility. The goal was to build a reliable, secure electronic voting platform that ensures user authenticity and prevents duplicate votes.</p>
+            
+            <h3>The Solution</h3>
+            <p>Developed a web-based voting application with secure login authentication. It features a real-time dashboard for administrators to monitor vote counts securely while maintaining voter anonymity.</p>
+            
+            <h3>Tech Stack</h3>
+            <div class="modal-tech-tags">
+                <span>HTML & CSS</span>
+                <span>JavaScript</span>
+                <span>PHP & MySQL</span>
+            </div>
+            <a href="http://official-evote.rf.gd" target="_blank" class="btn-primary" style="margin-top: 2rem; display: inline-block;">Visit Live Project <i class='bx bx-link-external'></i></a>
+        </div>
+    </div>
+
+    <!-- El Roi Case Study Modal -->
+    <div id="elroi-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('elroi-modal')"><i class='bx bx-x'></i></button>
+            <h2>El Roi Christian Academy (ERCA)</h2>
+            
+            <h3>The Challenge</h3>
+            <p>El Roi Christian Academy needed a modern, digital presence to improve communication with parents and streamline the delivery of educational programs and admission updates.</p>
+            
+            <h3>The Solution</h3>
+            <p>Designed and built an official web platform featuring an integrated admissions portal, intuitive navigation, and a responsive layout ensuring accessibility across all devices.</p>
+            
+            <h3>Tech Stack</h3>
+            <div class="modal-tech-tags">
+                <span>HTML & CSS</span>
+                <span>JavaScript</span>
+            </div>
+            <a href="http://elroichristianacademy.com" target="_blank" class="btn-primary" style="margin-top: 2rem; display: inline-block;">Visit Live Project <i class='bx bx-link-external'></i></a>
+        </div>
+    </div>
+
+    <!-- Floating Quick Contact Button -->
+    <a href="javascript:void(0);" onclick="switchTab('contact')" class="floating-contact" title="Hire Me">
+        <i class='bx bx-message-square-dots'></i>
+    </a>
 
     <script>
         function switchTab(tabId) {
