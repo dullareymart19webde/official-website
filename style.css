@@ -384,6 +384,50 @@ html {
     box-shadow: var(--shadow);
     transition: border-color 0.3s ease;
 }
+
+/* Profile Image Sticker & Floating Background Icons */
+.badge-dev {
+    position: absolute;
+    bottom: 12%;
+    right: -10px;
+    background: var(--main-color);
+    color: #fff;
+    padding: 0.8rem 1.8rem;
+    border-radius: 5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    box-shadow: 0 10px 20px rgba(15, 98, 254, 0.4), 0 0 25px rgba(15, 98, 254, 0.6);
+    z-index: 10;
+    animation: float 4s ease-in-out infinite;
+}
+.floating-icon {
+    position: absolute;
+    z-index: 0;
+    animation: float 6s ease-in-out infinite;
+    opacity: 0.15;
+    pointer-events: none;
+}
+.floating-icon i {
+    display: inline-block;
+    animation: spin 15s linear infinite;
+}
+.icon-1 { top: 15%; left: 8%; font-size: 6rem; color: var(--main-light); animation-delay: 0s; }
+.icon-2 { top: 55%; right: 10%; font-size: 5rem; color: var(--accent-color); animation-delay: 2s; }
+.icon-3 { bottom: 15%; left: 15%; font-size: 8rem; color: var(--main-color); animation-delay: 4s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 .about-text h3 {
     font-size: 2.8rem;
     margin-bottom: 1.5rem;
