@@ -908,6 +908,61 @@ body.dark-mode .cert-img-wrapper {
     font-weight: 600;
 }
 
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.gallery-item {
+    width: 100%;
+    height: 200px;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Zoom Modal Styling */
+#zoom-modal {
+    z-index: 1050; /* Places zoom modal above the gallery modal */
+}
+.zoom-modal-content {
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+.zoom-modal-content img {
+    max-width: 95vw;
+    max-height: 85vh;
+    border-radius: 1rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+    object-fit: contain;
+}
+.zoom-modal-content .close-btn {
+    top: 1rem; /* Adjust to be visible inside the modal bounds */
+    right: 1rem; /* Adjust to be visible inside the modal bounds */
+    background: var(--main-color);
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
 /* Responsiveness */
 @media (max-width: 1024px) {
     .header { position: relative; flex-direction: column; padding: 2rem 5%; gap: 2rem; }
@@ -930,4 +985,9 @@ body.dark-mode .cert-img-wrapper {
     .contact-form .input-box input { width: 100%; margin-bottom: 2rem; }
     .modal-content { padding: 3rem; }
     .cert-grid { grid-template-columns: 1fr; } /* Stacks certificates nicely on mobile */
+    
+    .zoom-modal-content .close-btn {
+        top: 1rem;
+        right: 1rem;
+    }
 }

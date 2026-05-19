@@ -92,6 +92,10 @@
                     <p>I am currently a proud student at <b>Torres Capitol College (TCC)</b>. My journey into tech began with simple coding challenges and has evolved into building full-scale applications.</p>
                     <p>Beyond the code, I am a problem solver at heart. Whether it's debugging a complex algorithm or refining a pixel-perfect user interface, I enjoy the process of continuous improvement.</p>
                     
+                    <button class="btn-primary" onclick="openModal('gallery-modal')" style="margin-bottom: 2rem;">
+                        <i class='bx bx-photo-album'></i> View Photo Gallery
+                    </button>
+
                     <div class="skills-grid">
                         <div class="skill-card"><i class="fab fa-html5"></i><h4>HTML/CSS</h4></div>
                         <div class="skill-card"><i class="fab fa-js"></i><h4>JavaScript</h4></div>
@@ -348,6 +352,33 @@
         </div>
     </div>
 
+    <!-- Photo Gallery Modal -->
+    <div id="gallery-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('gallery-modal')"><i class='bx bx-x'></i></button>
+            <h2>Photo Gallery</h2>
+            <p>A glimpse into my life, setup, and events.</p>
+            
+            <div class="gallery-grid">
+                <!-- Replace these src attributes with your actual photo paths -->
+                <div class="gallery-item"><img src="img/p1.jpg" alt="Gallery Photo 1" onclick="openZoom(this.src)"></div>
+                <div class="gallery-item"><img src="img/p2.jpg" alt="Gallery Photo 2" onclick="openZoom(this.src)"></div>
+                <div class="gallery-item"><img src="img/p3.jpg" alt="Gallery Photo 3" onclick="openZoom(this.src)"></div>
+                <div class="gallery-item"><img src="img/p4.jpeg" alt="Gallery Photo 4" onclick="openZoom(this.src)"></div>
+                <div class="gallery-item"><img src="img/p5.jpeg" alt="Gallery Photo 5" onclick="openZoom(this.src)"></div>
+                <div class="gallery-item"><img src="img/p6.jpg" alt="Gallery Photo 6" onclick="openZoom(this.src)"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Zoom Modal -->
+    <div id="zoom-modal" class="modal-overlay">
+        <div class="modal-content zoom-modal-content">
+            <button class="close-btn" onclick="closeModal('zoom-modal')"><i class='bx bx-x'></i></button>
+            <img id="zoomed-image" src="" alt="Zoomed Photo">
+        </div>
+    </div>
+
     <!-- Floating Quick Contact Button -->
     <a href="javascript:void(0);" onclick="switchTab('contact')" class="floating-contact" title="Hire Me">
         <i class='bx bx-message-square-dots'></i>
@@ -378,7 +409,16 @@
 
         function closeModal(modalId) {
             document.getElementById(modalId).classList.remove('show');
-            document.body.style.overflow = 'auto';
+            
+            
+            if (document.querySelectorAll('.modal-overlay.show').length === 0) {
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function openZoom(src) {
+            document.getElementById('zoomed-image').src = src;
+            document.getElementById('zoom-modal').classList.add('show');
         }
 
         const themeToggle = document.getElementById('theme-toggle');
