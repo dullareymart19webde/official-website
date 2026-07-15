@@ -10,10 +10,10 @@
     <meta name="keywords" content="Software Developer, Full-Stack Web Developer, Mobile App Developer, Flutter, Android Studio, Web Developer, Freelance Developer, Rey Mart Dulla, VERTEX, Philippines, Web Design">
     <meta property="og:title" content="VERTEX | Digital Portfolio">
     <meta property="og:description" content="Engineering Smart Digital Solutions. Hire Rey Mart for web and software development.">
-    <meta property="og:image" content="img/logo-vertexx.png">
+    <meta property="og:image" content="img/vtx-logo.png">
     <meta property="og:type" content="website">
 
-    <link rel="icon" type="image/png" href="logo-vertexx.png">
+    <link rel="icon" type="image/png" href="img/vtx-logo.png">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -24,22 +24,25 @@
     <header class="header">
         <div class="header-left">
             <div class="logo-box">
-                <img src="img/logo-vertexx.png" alt="VERTEX logo" class="header-logo-img">
+                <img src="img/vtx-logo.png" alt="VERTEX logo" class="header-logo-img">
                 <span class="logo">VERTEX<span>.</span></span>
             </div>
             <nav class="tab-nav">
-                <button class="tab-link active" data-target="home" onclick="switchTab('home')">Home</button>
-                <button class="tab-link" data-target="portfolio" onclick="switchTab('portfolio')">Digital Portfolio</button>
-                <button class="tab-link" data-target="websites" onclick="switchTab('websites')">Websites</button>
-                <button class="tab-link" data-target="apps" onclick="switchTab('apps')">Apps</button>
-                <button class="tab-link" data-target="contact" onclick="switchTab('contact')">Contact</button>
+                <button class="tab-link active" data-target="home" onclick="switchTab('home', 'Home')">Home</button>
+                <button class="tab-link" data-target="portfolio" onclick="switchTab('portfolio', 'Digital Portfolio')">Digital Portfolio</button>
+                <button class="tab-link" data-target="projects" onclick="switchTab('projects', 'Projects')">Projects</button>
+                <button class="tab-link" data-target="contact" onclick="switchTab('contact', 'Contact')">Contact</button>
             </nav>
         </div>
+        
+        <div id="mobile-page-title" class="mobile-page-title">Home</div>
+
         <div class="header-right">
             <button id="theme-toggle" class="theme-btn"><i class='bx bx-moon'></i></button>
-            <a href="https://web.facebook.com/rey.mart.dulla.683911" target="_blank"><i class='bx bxl-facebook'></i></a>
-            <a href="mailto:reymartdulla17@gmail.com"><i class='bx bx-envelope'></i></a>
-            <a href="my-cv.pdf" download class="btn-outline">Download CV</a>
+            <a href="https://web.facebook.com/rey.mart.dulla.683911" target="_blank" class="social-link"><i class='bx bxl-facebook'></i></a>
+            <a href="mailto:reymartdulla17@gmail.com" class="social-link"><i class='bx bx-envelope'></i></a>
+            <a href="my-cv.pdf" download class="btn-outline download-btn">Download CV</a>
+            <button class="menu-toggle" id="menuToggle"><i class='bx bx-menu'></i></button>
         </div>
     </header>
     <main class="main-content">
@@ -53,11 +56,11 @@
             <div class="home-grid-wrapper">
                 <div class="home-text">
                     <h3 class="static-intro">Rey Mart Dulla <span class="logo-sub">Software, Web & Mobile App Developer</span></h3>
-                    <h1>Engineering Smart <span class="text-highlight">Digital Solutions.</span></h1>
+                    <h1>Engineering Smart <br><span class="text-highlight type-writer" data-words='["Digital Solutions.", "Web Platforms.", "Premium Software.", "Mobile Apps.", "AI Engines."]'></span><span class="cursor">|</span></h1>
                     <p>Combining backend reliability with frontend clarity. I build responsive web platforms, efficient desktop applications, and cross-platform mobile apps tailored for real-world problem-solving.</p>
                     <div class="hero-actions">
-                        <button class="btn-primary" onclick="switchTab('portfolio')">Explore Portfolio</button>
-                        <div class="play-btn-box" onclick="switchTab('websites')">
+                        <button class="btn-primary" onclick="switchTab('portfolio', 'Digital Portfolio')">Explore Portfolio</button>
+                        <div class="play-btn-box" onclick="switchTab('projects', 'Projects')">
                             <div class="play-btn"><i class='bx bx-code-alt'></i></div>
                             <span>Live Projects</span>
                         </div>
@@ -105,34 +108,34 @@
                     </button>
 
                     <div class="skills-grid">
-                        <div class="skill-card"><i class="fab fa-html5"></i><h4>HTML/CSS</h4></div>
-                        <div class="skill-card"><i class="fab fa-js"></i><h4>JavaScript</h4></div>
-                        <div class="skill-card"><i class="fab fa-python"></i><h4>Python</h4></div>
-                        <div class="skill-card"><i class="fab fa-java"></i><h4>Java</h4></div>
-                        <div class="skill-card"><i class="fab fa-php"></i><h4>PHP</h4></div>
-                        <div class="skill-card"><i class="fas fa-database"></i><h4>MySQL & Firebase</h4></div>
-                        <div class="skill-card"><i class="fas fa-laptop-code"></i><h4>Android Studio & VS Code</h4></div>
-                        <div class="skill-card"><i class="bx bxl-flutter"></i><h4>Flutter / Dart</h4></div>
-                        <div class="skill-card"><i class="bx bxl-android"></i><h4>Android / Kotlin</h4></div>
-                        <div class="skill-card"><i class="fab fa-swift"></i><h4>Swift / React Native</h4></div>
+                        <div class="skill-card animate-on-scroll"><i class="fab fa-html5"></i><h4>HTML/CSS</h4></div>
+                        <div class="skill-card animate-on-scroll"><i class="fab fa-js"></i><h4>JavaScript & React</h4></div>
+                        <div class="skill-card animate-on-scroll"><i class="fab fa-python"></i><h4>Python</h4></div>
+                        <div class="skill-card animate-on-scroll"><i class="fab fa-java"></i><h4>Java</h4></div>
+                        <div class="skill-card animate-on-scroll"><i class="fab fa-php"></i><h4>PHP</h4></div>
+                        <div class="skill-card animate-on-scroll"><i class="fas fa-database"></i><h4>MySQL & Firebase</h4></div>
+                        <div class="skill-card animate-on-scroll"><i class="fas fa-laptop-code"></i><h4>Android Studio & VS Code</h4></div>
+                        <div class="skill-card animate-on-scroll"><i class="bx bxl-flutter"></i><h4>Flutter / Dart</h4></div>
+                        <div class="skill-card animate-on-scroll"><i class="bx bxl-android"></i><h4>Android / Kotlin</h4></div>
+                        <div class="skill-card animate-on-scroll"><i class="fab fa-swift"></i><h4>React Native</h4></div>
                     </div>
 
                     <!-- CERTIFICATIONS SECTION (Aligned neatly under the bio/skills) -->
                     <div class="certifications-section">
                         <h3 class="cert-heading">Professional <span>Certifications</span></h3>
                         <div class="cert-grid">
-                            <div class="cert-card">
+                            <div class="cert-card animate-on-scroll">
                                 <div class="cert-img-wrapper">
-                                    <img src="img/ICT-Days.jpg" alt="ICT Days Certificate">
+                                    <img src="img/ICT-Days.jpg" alt="ICT Days Certificate" loading="lazy">
                                 </div>
                                 <div class="cert-info">
                                     <h4>ICT Days</h4>
                                     <p>Information & Communications Technology</p>
                                 </div>
                             </div>
-                            <div class="cert-card">
+                            <div class="cert-card animate-on-scroll">
                                 <div class="cert-img-wrapper">
-                                    <img src="img/Seminar-Workshop 2026 E-Certificate.jpg" alt="Seminar Workshop 2026">
+                                    <img src="img/Seminar-Workshop 2026 E-Certificate.jpg" alt="Seminar Workshop 2026" loading="lazy">
                                 </div>
                                 <div class="cert-info">
                                     <h4>Seminar & Workshop 2026</h4>
@@ -146,15 +149,31 @@
             </div>
         </section>
 
-        <!-- WEBSITES TAB -->
-        <section id="websites" class="tab-content">
+        <!-- PROJECTS TAB -->
+        <section id="projects" class="tab-content">
             <div class="section-header">
-                <h2 class="heading">Developed <span>Websites</span></h2>
-                <p>Live web platforms and responsive designs I have built.</p>
+                <h2 class="heading">My <span>Projects</span></h2>
+                <p>A unified look at my live web platforms, premium software, and upcoming apps.</p>
             </div>
-            <div class="projects-container">
-                <div class="project-card">
-                    <div class="img-wrapper"><img src="img/evote.png" alt="Online Voting System"></div>
+
+            <!-- Category: Web Platforms -->
+            <div class="category-heading-container">
+                <h3 class="category-heading">Web Platforms</h3>
+            </div>
+            <div class="projects-container" style="margin-bottom: 5rem;">
+                <div class="project-card animate-on-scroll">
+                    <div class="badge-ongoing">ONGOING</div>
+                    <div class="img-wrapper"><img src="img/mts-logo.jpg" alt="Mindanaw Tribal School" loading="lazy"></div>
+                    <div class="project-info">
+                        <h4>Mindanaw Tribal School (MTS)</h4>
+                        <p>An ongoing web platform developed for the Mindanaw Tribal School, focusing on preserving cultural heritage while providing modern educational resources.</p>
+                        <a href="javascript:void(0);" onclick="openModal('mts-modal')" class="view-link">
+                            View Case Study <i class='bx bx-right-arrow-alt'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card animate-on-scroll">
+                    <div class="img-wrapper"><img src="img/evote.png" alt="Online Voting System" loading="lazy"></div>
                     <div class="project-info">
                         <h4>Online Voting System (E-Vote)</h4>
                         <p>A secure, fully functional web-based electronic voting platform. Designed to handle user authentication and reliable vote casting.</p>
@@ -163,8 +182,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="img-wrapper"><img src="img/el-roi.jpg" alt="El Roi Christian Academy"></div>
+                <div class="project-card animate-on-scroll">
+                    <div class="img-wrapper"><img src="img/el-roi.jpg" alt="El Roi Christian Academy" loading="lazy"></div>
                     <div class="project-info">
                         <h4>El Roi Christian Academy (ERCA)</h4>
                         <p>An official web platform developed for El Roi Christian Academy, providing information on educational programs, admissions, and the latest updates for students and parents.</p>
@@ -174,18 +193,67 @@
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- APPS TAB -->
-        <section id="apps" class="tab-content">
-            <div class="section-header">
-                <h2 class="heading">Software & <span>Apps</span></h2>
-                <p>Downloadable desktop applications and systems.</p>
+            <!-- Category: Premium Software -->
+            <div class="category-heading-container">
+                <h3 class="category-heading">Premium Software</h3>
             </div>
-            <div class="coming-soon-box">
+            <div class="shop-grid" style="margin-bottom: 5rem;">
+                <!-- Product 1 -->
+                <div class="shop-item animate-on-scroll">
+                    <div class="badge-pro">PRO & MOBILE</div>
+                    <div class="shop-img-box">
+                        <img src="img/vtx-logo.png" alt="PadMaster" loading="lazy">
+                    </div>
+                    <div class="shop-content">
+                        <h3 class="shop-title">PadMaster</h3>
+                        <p class="shop-desc">A robust, cloud-powered productivity application. Access your workspace from anywhere via the Web Edition or take it on the go with the cross-platform Mobile Edition featuring seamless synchronization.</p>
+                        <a href="javascript:void(0);" onclick="openModal('padmaster-modal')" class="view-link" style="margin-top: 1rem; margin-bottom: 2rem;">
+                            View Case Study <i class='bx bx-right-arrow-alt'></i>
+                        </a>
+                        <div class="shop-footer">
+                            <div class="shop-price">Inquire<span></span></div>
+                            <button class="btn-purchase" onclick="purchaseInquiry('PadMaster')">
+                                <i class='bx bx-cart-add'></i> Contact Me
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="shop-item animate-on-scroll">
+                    <div class="badge-pro">AI ENGINE</div>
+                    <div class="shop-img-box">
+                        <img src="img/vtx-logo.png" alt="Offline AI Engine" loading="lazy">
+                    </div>
+                    <div class="shop-content">
+                        <h3 class="shop-title">Offline AI Engine (VAI)</h3>
+                        <p class="shop-desc">A powerful, privacy-first Artificial Intelligence agent that runs entirely on your local machine. Lightning-fast responses and advanced data processing without needing an internet connection.</p>
+                        <a href="javascript:void(0);" onclick="openModal('vai-modal')" class="view-link" style="margin-top: 1rem; margin-bottom: 2rem;">
+                            View Case Study <i class='bx bx-right-arrow-alt'></i>
+                        </a>
+                        <div class="shop-footer">
+                            <div class="shop-price">Inquire<span></span></div>
+                            <button class="btn-purchase" onclick="purchaseInquiry('Offline AI Engine (VAI)')">
+                                <i class='bx bx-cart-add'></i> Contact Me
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Upcoming Apps -->
+            <div class="category-heading-container">
+                <h3 class="category-heading">Upcoming Apps</h3>
+            </div>
+            <div class="coming-soon-box animate-on-scroll" style="margin-bottom: 3rem;">
                 <i class='bx bx-code-block'></i>
                 <h3>Update in Progress</h3>
                 <p>I am currently refining my software projects and packaging new desktop applications. Check back soon for downloadable tools and systems!</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email to get notified" required>
+                    <button type="button">Notify Me</button>
+                </div>
             </div>
         </section>
 
@@ -196,7 +264,7 @@
                 <p>Have a project in mind or want to collaborate? Send me a message.</p>
             </div>
             <div class="contact-container">
-                <form action="https://formspree.io/f/xgoppbel" method="POST" class="contact-form">
+                <form id="contactForm" action="https://formspree.io/f/xgoppbel" method="POST" class="contact-form">
                     <div class="input-box">
                         <input type="text" name="name" placeholder="Full Name" required>
                         <input type="email" name="email" placeholder="Email Address" required>
@@ -205,7 +273,8 @@
                         <input type="text" name="subject" placeholder="Email Subject" required>
                     </div>
                     <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn-primary">Send Message</button>
+                    <button type="submit" id="submitBtn" class="btn-primary">Send Message</button>
+                    <div id="formMessage"></div>
                 </form>
             </div>
         </section>
@@ -363,6 +432,73 @@
         </div>
     </div>
 
+    <!-- MTS Case Study Modal -->
+    <div id="mts-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('mts-modal')"><i class='bx bx-x'></i></button>
+            <h2>Mindanaw Tribal School (MTS)</h2>
+            
+            <h3>The Challenge</h3>
+            <p>The Mindanaw Tribal School needed a modern digital platform to bridge traditional cultural heritage with contemporary educational resources, making information easily accessible to students and the community.</p>
+            
+            <h3>The Solution</h3>
+            <p>Developed a lightning-fast, highly interactive web application. It features smooth page transitions and a culturally resonant design that honors their roots while providing a seamless user experience.</p>
+            
+            <h3>Tech Stack</h3>
+            <div class="modal-tech-tags">
+                <span>React 19</span>
+                <span>Vite</span>
+                <span>Framer Motion</span>
+            </div>
+            <a href="javascript:void(0);" onclick="closeModal('mts-modal')" class="btn-primary" style="margin-top: 2rem; display: inline-block;">Close <i class='bx bx-check'></i></a>
+        </div>
+    </div>
+
+    <!-- PadMaster Case Study Modal -->
+    <div id="padmaster-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('padmaster-modal')"><i class='bx bx-x'></i></button>
+            <h2>PadMaster (Property Manager)</h2>
+            
+            <h3>The Challenge</h3>
+            <p>Managing properties, tenants, and leases across multiple platforms is chaotic. A centralized, real-time productivity app was needed to synchronize data instantly across web and mobile devices.</p>
+            
+            <h3>The Solution</h3>
+            <p>Architected a robust cloud-powered application using React and Firebase. It features real-time database syncing, secure user authentication, and a responsive dashboard that works beautifully on any screen size.</p>
+            
+            <h3>Tech Stack</h3>
+            <div class="modal-tech-tags">
+                <span>React 19</span>
+                <span>Firebase v12</span>
+                <span>React Router</span>
+                <span>React Hot Toast</span>
+            </div>
+            <a href="javascript:void(0);" onclick="closeModal('padmaster-modal')" class="btn-primary" style="margin-top: 2rem; display: inline-block;">Close <i class='bx bx-check'></i></a>
+        </div>
+    </div>
+
+    <!-- VAI Case Study Modal -->
+    <div id="vai-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('vai-modal')"><i class='bx bx-x'></i></button>
+            <h2>Offline AI Engine (VAI)</h2>
+            
+            <h3>The Challenge</h3>
+            <p>Most AI agents require an active internet connection and send private data to cloud servers. Users need a powerful, private AI that works 100% offline on their local devices.</p>
+            
+            <h3>The Solution</h3>
+            <p>Built a state-of-the-art mobile application utilizing React Native and `llama.rn` to run Large Language Models directly on the device hardware. This ensures zero latency and absolute data privacy.</p>
+            
+            <h3>Tech Stack</h3>
+            <div class="modal-tech-tags">
+                <span>React Native (Expo)</span>
+                <span>llama.rn (Local LLM)</span>
+                <span>Lucide Icons</span>
+            </div>
+            <a href="javascript:void(0);" onclick="closeModal('vai-modal')" class="btn-primary" style="margin-top: 2rem; display: inline-block;">Close <i class='bx bx-check'></i></a>
+        </div>
+    </div>
+
     <!-- Photo Gallery Modal -->
     <div id="gallery-modal" class="modal-overlay">
         <div class="modal-content">
@@ -372,12 +508,12 @@
             
             <div class="gallery-grid">
                 <!-- Replace these src attributes with your actual photo paths -->
-                <div class="gallery-item"><img src="img/p1.jpg" alt="Gallery Photo 1" onclick="openZoom(this.src)"></div>
-                <div class="gallery-item"><img src="img/p2.jpg" alt="Gallery Photo 2" onclick="openZoom(this.src)"></div>
-                <div class="gallery-item"><img src="img/p3.jpg" alt="Gallery Photo 3" onclick="openZoom(this.src)"></div>
-                <div class="gallery-item"><img src="img/p4.jpeg" alt="Gallery Photo 4" onclick="openZoom(this.src)"></div>
-                <div class="gallery-item"><img src="img/p5.jpeg" alt="Gallery Photo 5" onclick="openZoom(this.src)"></div>
-                <div class="gallery-item"><img src="img/p6.jpg" alt="Gallery Photo 6" onclick="openZoom(this.src)"></div>
+                <div class="gallery-item"><img src="img/p1.jpg" alt="Gallery Photo 1" loading="lazy" onclick="openZoom(this.src)"></div>
+                <div class="gallery-item"><img src="img/p2.jpg" alt="Gallery Photo 2" loading="lazy" onclick="openZoom(this.src)"></div>
+                <div class="gallery-item"><img src="img/p3.jpg" alt="Gallery Photo 3" loading="lazy" onclick="openZoom(this.src)"></div>
+                <div class="gallery-item"><img src="img/p4.jpeg" alt="Gallery Photo 4" loading="lazy" onclick="openZoom(this.src)"></div>
+                <div class="gallery-item"><img src="img/p5.jpeg" alt="Gallery Photo 5" loading="lazy" onclick="openZoom(this.src)"></div>
+                <div class="gallery-item"><img src="img/p6.jpg" alt="Gallery Photo 6" loading="lazy" onclick="openZoom(this.src)"></div>
             </div>
         </div>
     </div>
@@ -395,8 +531,87 @@
         <i class='bx bx-message-square-dots'></i>
     </a>
 
+    <!-- Floating Back to Top Button -->
+    <button id="backToTopBtn" class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+        <i class='bx bx-up-arrow-alt'></i>
+    </button>
+
     <script>
-        function switchTab(tabId) {
+        // --- Mobile Menu Toggle ---
+        const menuToggle = document.getElementById('menuToggle');
+        const tabNav = document.querySelector('.tab-nav');
+        
+        if (menuToggle && tabNav) {
+            menuToggle.addEventListener('click', () => {
+                tabNav.classList.toggle('nav-open');
+                const icon = menuToggle.querySelector('i');
+                if (tabNav.classList.contains('nav-open')) {
+                    icon.classList.replace('bx-menu', 'bx-x');
+                } else {
+                    icon.classList.replace('bx-x', 'bx-menu');
+                }
+            });
+        }
+        
+        // Hide mobile menu when clicking a tab
+        document.querySelectorAll('.tab-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (tabNav.classList.contains('nav-open')) {
+                    tabNav.classList.remove('nav-open');
+                    const icon = menuToggle.querySelector('i');
+                    icon.classList.replace('bx-x', 'bx-menu');
+                }
+            });
+        });
+
+        // --- Back to Top Button ---
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        // --- Typing Animation ---
+        const typeWriterElement = document.querySelector('.type-writer');
+        if (typeWriterElement) {
+            const words = JSON.parse(typeWriterElement.getAttribute('data-words'));
+            let wordIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function type() {
+                const currentWord = words[wordIndex];
+                
+                if (isDeleting) {
+                    typeWriterElement.textContent = currentWord.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    typeWriterElement.textContent = currentWord.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+
+                let typeSpeed = isDeleting ? 50 : 100;
+
+                if (!isDeleting && charIndex === currentWord.length) {
+                    typeSpeed = 2000; // Pause at end of word
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length;
+                    typeSpeed = 500; // Pause before typing new word
+                }
+
+                setTimeout(type, typeSpeed);
+            }
+            
+            // Start the effect
+            setTimeout(type, 1000);
+        }
+
+        function switchTab(tabId, tabTitle = '') {
             let tabContents = document.getElementsByClassName("tab-content");
             for (let i = 0; i < tabContents.length; i++) {
                 tabContents[i].classList.remove("active");
@@ -409,6 +624,10 @@
             let targetLink = document.querySelector(`.tab-link[data-target="${tabId}"]`);
             if (targetLink) {
                 targetLink.classList.add("active");
+            }
+            if (tabTitle) {
+                const mobileTitle = document.getElementById('mobile-page-title');
+                if (mobileTitle) mobileTitle.textContent = tabTitle;
             }
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
@@ -457,6 +676,94 @@
                 localStorage.setItem('theme', isDark ? 'dark' : 'light');
             } catch(e) {}
         });
+
+        // --- Intersection Observer for Scroll Animations ---
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    
+                    if (entry.target.classList.contains('skill-bar-item')) {
+                        const fill = entry.target.querySelector('.skill-progress-fill');
+                        if (fill) {
+                            fill.style.width = fill.getAttribute('data-width');
+                        }
+                    }
+                    
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // --- AJAX Contact Form Submission ---
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+        const submitBtn = document.getElementById('submitBtn');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                submitBtn.innerText = 'Sending...';
+                submitBtn.disabled = true;
+                
+                const formData = new FormData(contactForm);
+                fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        formMessage.innerText = 'Thank you! Your message has been sent successfully.';
+                        formMessage.className = 'success';
+                        contactForm.reset();
+                    } else {
+                        formMessage.innerText = 'Oops! There was a problem submitting your form.';
+                        formMessage.className = 'error';
+                    }
+                })
+                .catch(error => {
+                    formMessage.innerText = 'Oops! There was a problem submitting your form.';
+                    formMessage.className = 'error';
+                })
+                .finally(() => {
+                    submitBtn.innerText = 'Send Message';
+                    submitBtn.disabled = false;
+                });
+            });
+        }
+
+        // --- Store Purchase Inquiry Logic ---
+        function purchaseInquiry(productName) {
+            // Switch to Contact Tab
+            switchTab('contact');
+            
+            // Prefill Subject with product name
+            const subjectInput = document.querySelector('input[name="subject"]');
+            if (subjectInput) {
+                subjectInput.value = `Inquiry to purchase: ${productName}`;
+                
+                // Add a small highlight animation to indicate it was prefilled
+                subjectInput.style.transition = '0.3s';
+                subjectInput.style.boxShadow = '0 0 15px var(--main-color)';
+                subjectInput.style.borderColor = 'var(--main-color)';
+                setTimeout(() => {
+                    subjectInput.style.boxShadow = 'none';
+                    subjectInput.style.borderColor = 'var(--border-color)';
+                }, 2000);
+            }
+            
+            // Scroll to the contact form smoothly
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
     </script>
 </body>
 </html>
