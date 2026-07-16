@@ -29,8 +29,26 @@
             </div>
             <nav class="tab-nav">
                 <button class="tab-link active" data-target="home" onclick="switchTab('home', 'Home')">Home</button>
-                <button class="tab-link" data-target="portfolio" onclick="switchTab('portfolio', 'Digital Portfolio')">Digital Portfolio</button>
-                <button class="tab-link" data-target="projects" onclick="switchTab('projects', 'Projects')">Projects</button>
+                
+                <div class="dropdown-wrapper">
+                    <button class="tab-link" data-target="portfolio" onclick="switchTab('portfolio', 'Digital Portfolio')">Digital Portfolio <i class='bx bx-chevron-down dropdown-icon'></i></button>
+                    <div class="dropdown-menu">
+                        <a href="javascript:void(0);" onclick="switchTabAndScroll('portfolio', 'Digital Portfolio', 'portfolio-about')"><i class='bx bx-user'></i> About Me</a>
+                        <a href="javascript:void(0);" onclick="switchTabAndScroll('portfolio', 'Digital Portfolio', 'portfolio-skills')"><i class='bx bx-brain'></i> Skills</a>
+                        <a href="javascript:void(0);" onclick="switchTabAndScroll('portfolio', 'Digital Portfolio', 'portfolio-certs')"><i class='bx bx-certification'></i> Certifications</a>
+                    </div>
+                </div>
+
+                <div class="dropdown-wrapper">
+                    <button class="tab-link" data-target="projects" onclick="switchTab('projects', 'Projects')">Projects <i class='bx bx-chevron-down dropdown-icon'></i></button>
+                    <div class="dropdown-menu">
+                        <a href="javascript:void(0);" onclick="switchTabAndScroll('projects', 'Projects', 'projects-web')"><i class='bx bx-globe'></i> Web Platforms</a>
+                        <a href="javascript:void(0);" onclick="switchTabAndScroll('projects', 'Projects', 'projects-software')"><i class='bx bx-desktop'></i> Premium Software</a>
+                        <a href="javascript:void(0);" onclick="switchTabAndScroll('projects', 'Projects', 'projects-upcoming')"><i class='bx bx-time'></i> Upcoming Apps</a>
+                    </div>
+                </div>
+
+                <button class="tab-link" data-target="games" onclick="switchTab('games', 'Games')">Games</button>
                 <button class="tab-link" data-target="contact" onclick="switchTab('contact', 'Contact')">Contact</button>
             </nav>
         </div>
@@ -56,7 +74,7 @@
             <div class="home-grid-wrapper">
                 <div class="home-text">
                     <h3 class="static-intro">Rey Mart Dulla <span class="logo-sub">Software, Web & Mobile App Developer</span></h3>
-                    <h1>Engineering Smart <br><span class="text-highlight type-writer" data-words='["Digital Solutions.", "Web Platforms.", "Premium Software.", "Mobile Apps.", "AI Engines."]'></span><span class="cursor">|</span></h1>
+                    <h1>Engineering Smart <br><span class="text-highlight">Digital Solutions.</span></h1>
                     <p>Combining backend reliability with frontend clarity. I build responsive web platforms, efficient desktop applications, and cross-platform mobile apps tailored for real-world problem-solving.</p>
                     <div class="hero-actions">
                         <button class="btn-primary" onclick="switchTab('portfolio', 'Digital Portfolio')">Explore Portfolio</button>
@@ -92,7 +110,7 @@
                 <h2 class="heading">Digital <span>Portfolio</span></h2>
                 <p>A look into my skills and educational background.</p>
             </div>
-            <div class="about-grid">
+            <div class="about-grid" id="portfolio-about">
                 <div class="about-img-box">
                     <div class="image-blob-bg"></div>
                     <img src="img/Profile.png" alt="Rey Mart Dulla">
@@ -107,7 +125,7 @@
                         <i class='bx bx-photo-album'></i> View Photo Gallery
                     </button>
 
-                    <div class="skills-grid">
+                    <div class="skills-grid" id="portfolio-skills">
                         <div class="skill-card animate-on-scroll"><i class="fab fa-html5"></i><h4>HTML/CSS</h4></div>
                         <div class="skill-card animate-on-scroll"><i class="fab fa-js"></i><h4>JavaScript & React</h4></div>
                         <div class="skill-card animate-on-scroll"><i class="fab fa-python"></i><h4>Python</h4></div>
@@ -121,7 +139,7 @@
                     </div>
 
                     <!-- CERTIFICATIONS SECTION (Aligned neatly under the bio/skills) -->
-                    <div class="certifications-section">
+                    <div class="certifications-section" id="portfolio-certs">
                         <h3 class="cert-heading">Professional <span>Certifications</span></h3>
                         <div class="cert-grid">
                             <div class="cert-card animate-on-scroll">
@@ -157,7 +175,7 @@
             </div>
 
             <!-- Category: Web Platforms -->
-            <div class="category-heading-container">
+            <div class="category-heading-container" id="projects-web">
                 <h3 class="category-heading">Web Platforms</h3>
             </div>
             <div class="projects-container" style="margin-bottom: 5rem;">
@@ -195,7 +213,7 @@
             </div>
 
             <!-- Category: Premium Software -->
-            <div class="category-heading-container">
+            <div class="category-heading-container" id="projects-software">
                 <h3 class="category-heading">Premium Software</h3>
             </div>
             <div class="shop-grid" style="margin-bottom: 5rem;">
@@ -243,7 +261,7 @@
             </div>
 
             <!-- Category: Upcoming Apps -->
-            <div class="category-heading-container">
+            <div class="category-heading-container" id="projects-upcoming">
                 <h3 class="category-heading">Upcoming Apps</h3>
             </div>
             <div class="coming-soon-box animate-on-scroll" style="margin-bottom: 3rem;">
@@ -254,6 +272,102 @@
                     <input type="email" placeholder="Enter your email to get notified" required>
                     <button type="button">Notify Me</button>
                 </div>
+            </div>
+        </section>
+
+        <!-- GAMES TAB -->
+        <section id="games" class="tab-content">
+            <div class="section-header">
+                <h2 class="heading">Simple <span>Games</span></h2>
+                <p>A collection of mini-games built with web technologies. Have fun!</p>
+            </div>
+            
+            <div class="projects-container" style="margin-bottom: 5rem;">
+                
+                <!-- Game 1: Tic-Tac-Toe -->
+                <div class="project-card animate-on-scroll">
+                    <div class="img-wrapper" style="background: var(--main-fade); display: flex; justify-content: center; align-items: center; font-size: 6rem; color: var(--main-color);">
+                        <i class='bx bx-grid-alt'></i>
+                    </div>
+                    <div class="project-info">
+                        <h4>Tic-Tac-Toe</h4>
+                        <p>The classic paper-and-pencil game brought to the web. Play against a friend locally.</p>
+                        <a href="javascript:void(0);" onclick="openModal('tictactoe-modal')" class="view-link">
+                            Play Now <i class='bx bx-play-circle'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game 2: Memory Match -->
+                <div class="project-card animate-on-scroll">
+                    <div class="img-wrapper" style="background: var(--main-fade); display: flex; justify-content: center; align-items: center; font-size: 6rem; color: var(--accent-color);">
+                        <i class='bx bx-brain'></i>
+                    </div>
+                    <div class="project-info">
+                        <h4>Memory Match</h4>
+                        <p>Test your memory by finding all the matching pairs of cards as quickly as you can.</p>
+                        <a href="javascript:void(0);" onclick="openModal('memory-modal'); initMemoryGame();" class="view-link">
+                            Play Now <i class='bx bx-play-circle'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game 3: Snake -->
+                <div class="project-card animate-on-scroll">
+                    <div class="img-wrapper" style="background: var(--main-fade); display: flex; justify-content: center; align-items: center; font-size: 6rem; color: #10b981;">
+                        <i class='bx bx-move'></i>
+                    </div>
+                    <div class="project-info">
+                        <h4>Snake Game</h4>
+                        <p>The retro classic. Navigate the snake to eat the food and grow, but don't hit the walls or yourself!</p>
+                        <a href="javascript:void(0);" onclick="openModal('snake-modal'); initSnakeGame();" class="view-link">
+                            Play Now <i class='bx bx-play-circle'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game 4: Typing Speed Test -->
+                <div class="project-card animate-on-scroll">
+                    <div class="img-wrapper" style="background: var(--main-fade); display: flex; justify-content: center; align-items: center; font-size: 6rem; color: #f59e0b;">
+                        <i class='bx bx-keyboard'></i>
+                    </div>
+                    <div class="project-info">
+                        <h4>Typing Speed Test</h4>
+                        <p>How fast are your developer fingers? Type the coding-themed sentence as quickly as possible.</p>
+                        <a href="javascript:void(0);" onclick="openModal('typing-modal'); initTypingTest();" class="view-link">
+                            Play Now <i class='bx bx-play-circle'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game 5: Simon Says -->
+                <div class="project-card animate-on-scroll">
+                    <div class="img-wrapper" style="background: var(--main-fade); display: flex; justify-content: center; align-items: center; font-size: 6rem; color: #ef4444;">
+                        <i class='bx bx-aperture'></i>
+                    </div>
+                    <div class="project-info">
+                        <h4>Simon Says</h4>
+                        <p>A classic sequence memory game. Watch the colors flash and repeat the pattern back.</p>
+                        <a href="javascript:void(0);" onclick="openModal('simon-modal'); initSimonGame();" class="view-link">
+                            Play Now <i class='bx bx-play-circle'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game 6: Rock Paper Scissors -->
+                <div class="project-card animate-on-scroll">
+                    <div class="img-wrapper" style="background: var(--main-fade); display: flex; justify-content: center; align-items: center; font-size: 6rem; color: #8b5cf6;">
+                        <i class='bx bx-hand'></i>
+                    </div>
+                    <div class="project-info">
+                        <h4>Rock Paper Scissors</h4>
+                        <p>A quick best-of battle against the computer. Choose your weapon!</p>
+                        <a href="javascript:void(0);" onclick="openModal('rps-modal'); initRPS();" class="view-link">
+                            Play Now <i class='bx bx-play-circle'></i>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -518,6 +632,117 @@
         </div>
     </div>
 
+    <!-- Tic-Tac-Toe Modal -->
+    <div id="tictactoe-modal" class="modal-overlay">
+        <div class="modal-content" style="text-align: center;">
+            <button class="close-btn" onclick="closeModal('tictactoe-modal')"><i class='bx bx-x'></i></button>
+            <h2>Tic-Tac-Toe</h2>
+            <p>Player X's turn</p>
+            
+            <div class="tic-tac-toe-board" id="ttt-board">
+                <div class="ttt-cell" data-index="0"></div>
+                <div class="ttt-cell" data-index="1"></div>
+                <div class="ttt-cell" data-index="2"></div>
+                <div class="ttt-cell" data-index="3"></div>
+                <div class="ttt-cell" data-index="4"></div>
+                <div class="ttt-cell" data-index="5"></div>
+                <div class="ttt-cell" data-index="6"></div>
+                <div class="ttt-cell" data-index="7"></div>
+                <div class="ttt-cell" data-index="8"></div>
+            </div>
+            
+            <div id="ttt-status" style="font-size: 1.8rem; font-weight: 700; margin: 2rem 0; color: var(--main-color);"></div>
+            <button class="btn-primary" onclick="resetTicTacToe()">Restart Game</button>
+        </div>
+    </div>
+
+    <!-- Memory Match Modal -->
+    <div id="memory-modal" class="modal-overlay">
+        <div class="modal-content" style="text-align: center; max-width: 500px;">
+            <button class="close-btn" onclick="closeModal('memory-modal')"><i class='bx bx-x'></i></button>
+            <h2>Memory Match</h2>
+            <p>Moves: <span id="memory-moves">0</span> | Pairs: <span id="memory-pairs">0</span>/8</p>
+            
+            <div class="memory-board" id="memory-board">
+                <!-- Cards generated by JS -->
+            </div>
+            
+            <div id="memory-status" style="font-size: 1.8rem; font-weight: 700; margin: 2rem 0; color: var(--main-color);"></div>
+            <button class="btn-primary" onclick="initMemoryGame()">Restart Game</button>
+        </div>
+    </div>
+
+    <!-- Snake Modal -->
+    <div id="snake-modal" class="modal-overlay">
+        <div class="modal-content" style="text-align: center; max-width: 500px;">
+            <button class="close-btn" onclick="closeModal('snake-modal'); clearInterval(snakeGame);"><i class='bx bx-x'></i></button>
+            <h2>Snake Game</h2>
+            <p>Score: <span id="snake-score">0</span></p>
+            <p style="font-size: 1.2rem; margin-top: -1rem;">Use Arrow Keys to move</p>
+            
+            <canvas id="snake-board" width="400" height="400" style="background: var(--bg-color); border: 2px solid var(--border-color); border-radius: 1rem; margin: 1rem auto; display: block;"></canvas>
+            
+            <div id="snake-status" style="font-size: 1.8rem; font-weight: 700; margin: 1rem 0; color: #ff4d4d;"></div>
+            <button class="btn-primary" onclick="initSnakeGame()">Restart Game</button>
+        </div>
+    </div>
+
+    <!-- Typing Test Modal -->
+    <div id="typing-modal" class="modal-overlay">
+        <div class="modal-content" style="text-align: center;">
+            <button class="close-btn" onclick="closeModal('typing-modal')"><i class='bx bx-x'></i></button>
+            <h2>Typing Speed Test</h2>
+            <p>WPM: <span id="typing-wpm" style="color: var(--main-color); font-weight: bold;">0</span></p>
+            
+            <div style="background: var(--main-fade); padding: 2rem; border-radius: 1rem; margin: 2rem 0;">
+                <p id="typing-sentence" style="font-size: 1.8rem; font-weight: 600; color: var(--text-color); user-select: none;">Loading sentence...</p>
+            </div>
+            
+            <textarea id="typing-input" oninput="checkTyping()" placeholder="Start typing here..." rows="3" style="width: 100%; padding: 1.5rem; font-size: 1.6rem; border-radius: 1rem; border: 2px solid var(--border-color); background: var(--bg-color); color: var(--text-color); margin-bottom: 2rem; resize: none;"></textarea>
+            
+            <div id="typing-status" style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem; color: #10b981;"></div>
+            <button class="btn-primary" onclick="initTypingTest()">New Sentence</button>
+        </div>
+    </div>
+
+    <!-- Simon Says Modal -->
+    <div id="simon-modal" class="modal-overlay">
+        <div class="modal-content" style="text-align: center; max-width: 450px;">
+            <button class="close-btn" onclick="closeModal('simon-modal'); simonPlaying=false;"><i class='bx bx-x'></i></button>
+            <h2>Simon Says</h2>
+            <p>Level: <span id="simon-level">0</span></p>
+            
+            <div class="simon-board" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 300px; margin: 2rem auto;">
+                <div id="simon-green" class="simon-btn simon-green" onclick="simonBtnClick('green')"></div>
+                <div id="simon-red" class="simon-btn simon-red" onclick="simonBtnClick('red')"></div>
+                <div id="simon-yellow" class="simon-btn simon-yellow" onclick="simonBtnClick('yellow')"></div>
+                <div id="simon-blue" class="simon-btn simon-blue" onclick="simonBtnClick('blue')"></div>
+            </div>
+            
+            <div id="simon-status" style="font-size: 1.6rem; font-weight: 600; margin: 1.5rem 0; color: var(--p-color);">Press start to play!</div>
+            <button class="btn-primary" onclick="initSimonGame()">Start Game</button>
+        </div>
+    </div>
+
+    <!-- Rock Paper Scissors Modal -->
+    <div id="rps-modal" class="modal-overlay">
+        <div class="modal-content" style="text-align: center; max-width: 500px;">
+            <button class="close-btn" onclick="closeModal('rps-modal')"><i class='bx bx-x'></i></button>
+            <h2>Rock Paper Scissors</h2>
+            <p>Player - CPU</p>
+            <h3 id="rps-score" style="font-size: 3rem; margin-top: 0.5rem; color: var(--main-color);">0 - 0</h3>
+            
+            <div style="display: flex; justify-content: center; gap: 2rem; margin: 3rem 0;">
+                <button class="rps-btn" onclick="playRPS('rock')"><i class='bx bx-landscape'></i><br>Rock</button>
+                <button class="rps-btn" onclick="playRPS('paper')"><i class='bx bx-file-blank'></i><br>Paper</button>
+                <button class="rps-btn" onclick="playRPS('scissors')"><i class='bx bx-cut'></i><br>Scissors</button>
+            </div>
+            
+            <div id="rps-status" style="font-size: 1.8rem; font-weight: 600; margin: 2rem 0; color: var(--text-color);">Make your move!</div>
+            <button class="btn-primary" onclick="initRPS()">Reset Score</button>
+        </div>
+    </div>
+
     <!-- Image Zoom Modal -->
     <div id="zoom-modal" class="modal-overlay">
         <div class="modal-content zoom-modal-content">
@@ -574,41 +799,32 @@
             }
         });
 
-        // --- Typing Animation ---
-        const typeWriterElement = document.querySelector('.type-writer');
-        if (typeWriterElement) {
-            const words = JSON.parse(typeWriterElement.getAttribute('data-words'));
-            let wordIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
 
-            function type() {
-                const currentWord = words[wordIndex];
-                
-                if (isDeleting) {
-                    typeWriterElement.textContent = currentWord.substring(0, charIndex - 1);
-                    charIndex--;
-                } else {
-                    typeWriterElement.textContent = currentWord.substring(0, charIndex + 1);
-                    charIndex++;
-                }
 
-                let typeSpeed = isDeleting ? 50 : 100;
-
-                if (!isDeleting && charIndex === currentWord.length) {
-                    typeSpeed = 2000; // Pause at end of word
-                    isDeleting = true;
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    wordIndex = (wordIndex + 1) % words.length;
-                    typeSpeed = 500; // Pause before typing new word
-                }
-
-                setTimeout(type, typeSpeed);
-            }
+        function switchTabAndScroll(tabId, tabTitle, targetSectionId) {
+            switchTab(tabId, tabTitle);
             
-            // Start the effect
-            setTimeout(type, 1000);
+            // Wait for tab transition, then scroll
+            setTimeout(() => {
+                const targetElement = document.getElementById(targetSectionId);
+                if (targetElement) {
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.scrollY - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 100);
+            
+            // Close mobile menu if open
+            if (tabNav && tabNav.classList.contains('nav-open')) {
+                tabNav.classList.remove('nav-open');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.replace('bx-x', 'bx-menu');
+            }
         }
 
         function switchTab(tabId, tabTitle = '') {
@@ -764,6 +980,8 @@
             // Scroll to the contact form smoothly
             document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
         }
+
     </script>
+    <script src="games.js"></script>
 </body>
 </html>
