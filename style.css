@@ -195,14 +195,17 @@ body.dark-mode .dropdown-menu {
 }
 
 .dropdown-menu a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 2rem;
     color: var(--main-color);
-    width: 24px;
-    text-align: center;
+    width: 3.2rem;
+    height: 3.2rem;
     background: var(--main-fade);
-    padding: 0.5rem;
     border-radius: 8px;
     transition: 0.3s;
+    flex-shrink: 0;
 }
 
 .dropdown-menu a:hover {
