@@ -113,7 +113,7 @@
             <div class="about-grid" id="portfolio-about">
                 <div class="about-img-box">
                     <div class="image-blob-bg"></div>
-                    <img src="img/Profile.png" alt="Rey Mart Dulla">
+                    <img src="img/profile.jpg" alt="Rey Mart Dulla">
                     <div class="sticker badge-dev"><i class='bx bx-mobile'></i> Mobile Dev</div>
                 </div>
                 <div class="about-text">
@@ -140,9 +140,21 @@
 
                     <!-- CERTIFICATIONS SECTION (Aligned neatly under the bio/skills) -->
                     <div class="certifications-section" id="portfolio-certs">
-                        <h3 class="cert-heading">Professional <span>Certifications</span></h3>
-                        <div class="cert-grid">
-                            <div class="cert-card animate-on-scroll">
+                        <h3 class="cert-heading" onclick="toggleCertificates()" style="cursor: pointer; display: flex; align-items: center; gap: 10px;">
+                            <span>Certificates</span>
+                            <i class='bx bx-chevron-down' id="cert-toggle-icon" style="font-size: 2rem; transition: transform 0.3s;"></i>
+                        </h3>
+                        <div class="cert-grid" id="cert-grid-container" style="display: none;">
+                            <div class="cert-card animate-on-scroll" onclick="openModal('cert-devcon-modal')" style="cursor: pointer;">
+                                <div class="cert-img-wrapper">
+                                    <img src="img/devcon.jpg" alt="DEVCON Bits of Light" loading="lazy">
+                                </div>
+                                <div class="cert-info">
+                                    <h4>DEVCON Bits of Light</h4>
+                                    <p>Frontend Forge Workshop</p>
+                                </div>
+                            </div>
+                            <div class="cert-card animate-on-scroll" onclick="openModal('cert-ict-modal')" style="cursor: pointer;">
                                 <div class="cert-img-wrapper">
                                     <img src="img/ICT-Days.jpg" alt="ICT Days Certificate" loading="lazy">
                                 </div>
@@ -151,7 +163,7 @@
                                     <p>Information & Communications Technology</p>
                                 </div>
                             </div>
-                            <div class="cert-card animate-on-scroll">
+                            <div class="cert-card animate-on-scroll" onclick="openModal('cert-seminar-modal')" style="cursor: pointer;">
                                 <div class="cert-img-wrapper">
                                     <img src="img/Seminar-Workshop 2026 E-Certificate.jpg" alt="Seminar Workshop 2026" loading="lazy">
                                 </div>
@@ -388,15 +400,47 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 VERTEX | Rey Mart Dulla. All Rights Reserved.</p>
-            <div style="margin: 1rem 0;">
-                <a href="https://hits.sh/vertex.dullareymart19.workers.dev/"><img alt="Hits" src="https://hits.sh/vertex.dullareymart19.workers.dev.svg?style=for-the-badge&label=Visitors&color=007ec6"/></a>
-            </div>
             <div class="footer-bottom-links">
                 <a href="javascript:void(0);" onclick="openModal('privacy-modal')">Privacy Policy</a>
                 <a href="javascript:void(0);" onclick="openModal('terms-modal')">Terms of Service</a>
             </div>
         </div>
     </footer>
+
+    <!-- Certificate Modals -->
+    <div id="cert-devcon-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('cert-devcon-modal')"><i class='bx bx-x'></i></button>
+            <div class="project-details">
+                <img src="img/devcon.jpg" alt="DEVCON Bits of Light" style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
+                <h2>DEVCON Bits of Light - Frontend Forge</h2>
+                <p>This certificate was awarded for active participation in the Frontend Forge workshop during the DEVCON Bits of Light Roadshow. The workshop covered the fundamentals of UI/UX design, including design principles, Human-Computer Interaction (HCI), and user-centered design.</p>
+                <p>This experience highlighted my dedication to developing meaningful and accessible digital experiences while exploring creativity and innovation.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="cert-ict-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('cert-ict-modal')"><i class='bx bx-x'></i></button>
+            <div class="project-details">
+                <img src="img/ICT-Days.jpg" alt="ICT Days Certificate" style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
+                <h2>ICT Days</h2>
+                <p>This certificate recognizes my participation and achievement during the Information & Communications Technology (ICT) Days. It reflects my ongoing commitment to staying updated with the latest technological trends and enhancing my technical skills in the fast-paced IT industry.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="cert-seminar-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('cert-seminar-modal')"><i class='bx bx-x'></i></button>
+            <div class="project-details">
+                <img src="img/Seminar-Workshop 2026 E-Certificate.jpg" alt="Seminar Workshop 2026" style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
+                <h2>Seminar & Workshop 2026</h2>
+                <p>Awarded for participating in the 2026 Technical Skills Development Seminar & Workshop. This event focused on collaborative problem-solving, advanced software development practices, and expanding practical knowledge in modern technology stacks.</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Privacy Policy Modal -->
     <div id="privacy-modal" class="modal-overlay">
@@ -790,6 +834,26 @@
                     submitBtn.disabled = false;
                 });
             });
+        }
+
+        // --- Toggle Certificates ---
+        function toggleCertificates() {
+            const grid = document.getElementById('cert-grid-container');
+            const icon = document.getElementById('cert-toggle-icon');
+            if (grid.style.display === 'none' || grid.style.display === '') {
+                grid.style.display = 'grid';
+                icon.style.transform = 'rotate(180deg)';
+                // Trigger animation reflow for items
+                const cards = grid.querySelectorAll('.cert-card');
+                cards.forEach(card => {
+                    card.style.animation = 'none';
+                    card.offsetHeight; /* trigger reflow */
+                    card.style.animation = null;
+                });
+            } else {
+                grid.style.display = 'none';
+                icon.style.transform = 'rotate(0deg)';
+            }
         }
 
         // --- Store Purchase Inquiry Logic ---
