@@ -1596,7 +1596,8 @@ body.dark-mode .memory-card-front {
         visibility: visible;
         transform: translateY(0);
     }
-    .header-right .social-link {
+    .header-right .social-link,
+    .header-right .download-btn {
         display: none;
     }
     .tab-link {
@@ -1884,4 +1885,9 @@ body.dark-mode .memory-card-front {
 .newsletter-form button:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 25px rgba(15, 98, 254, 0.4);
+}
+
+.mobile-only { display: none; }
+@media (max-width: 900px) {
+    .mobile-only { display: block; }
 }
