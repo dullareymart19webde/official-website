@@ -1596,8 +1596,7 @@ body.dark-mode .memory-card-front {
         visibility: visible;
         transform: translateY(0);
     }
-    .header-right .social-link, 
-    .header-right .download-btn {
+    .header-right .social-link {
         display: none;
     }
     .tab-link {
