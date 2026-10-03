@@ -325,14 +325,26 @@
             <div class="contact-container">
                 <form id="contactForm" action="https://formspree.io/f/xgoppbel" method="POST" class="contact-form">
                     <div class="input-box">
-                        <input type="text" name="name" placeholder="Full Name" required>
-                        <input type="email" name="email" placeholder="Email Address" required>
+                        <div class="input-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
                     </div>
                     <div class="input-box">
-                        <input type="text" name="subject" placeholder="Email Subject" required>
+                        <div class="input-group" style="width: 100%;">
+                            <label for="subject">Email Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                        </div>
                     </div>
-                    <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-                    <button type="submit" id="submitBtn" class="btn-primary">Send Message</button>
+                    <div class="input-group" style="width: 100%;">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" cols="30" rows="10" placeholder="Hello Rey Mart, I would like to discuss..." required></textarea>
+                    </div>
+                    <button type="submit" id="submitBtn" class="btn-primary" style="margin-top: 1.5rem;">Send Message</button>
                     <div id="formMessage"></div>
                 </form>
             </div>
