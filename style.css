@@ -1898,9 +1898,9 @@ body.dark-mode .memory-card-front {
 
 /* 1. Accessibility: Focus Rings */
 *:focus-visible {
-    outline: 2px solid var(--main-color) !important;
-    outline-offset: 4px !important;
-    border-radius: 4px !important;
+    outline: 2px solid var(--main-color);
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
 /* 2. Interaction: Minimum Touch Targets */
@@ -1909,25 +1909,24 @@ body.dark-mode .memory-card-front {
 .menu-toggle,
 .floating-contact,
 .back-to-top {
-    min-width: 44px !important;
-    min-height: 44px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    min-width: 44px;
+    min-height: 44px;
 }
 
-.btn-primary, .btn-outline {
-    padding: 1.4rem 2.5rem !important; /* Bump padding for touch height */
-    min-height: 44px !important;
+/* Safely center content without overriding mobile/desktop display rules */
+.theme-btn, .floating-contact, .back-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* 3. Animation: Premium Cubic-Bezier Timings */
 .btn-primary, .btn-outline, .project-card, .shop-item, .cert-card {
-    transition: all 0.4s cubic-bezier(0.2, 0, 0, 1) !important;
+    transition: all 0.4s cubic-bezier(0.2, 0, 0, 1);
 }
 
 .btn-primary:active, .btn-outline:active {
-    transform: scale(0.97) !important;
+    transform: scale(0.97);
 }
 
 /* 4. Forms: Visible Labels & progressive feedback */
