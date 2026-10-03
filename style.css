@@ -1914,7 +1914,7 @@ body.dark-mode .memory-card-front {
 }
 
 /* Safely center content without overriding mobile/desktop display rules */
-.theme-btn, .floating-contact, .back-to-top {
+.social-link, .theme-btn, .floating-contact, .back-to-top {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1945,5 +1945,6 @@ body.dark-mode .memory-card-front {
 .contact-form .input-box {
     gap: 1.5rem;
 }
+
 
 
