@@ -18,7 +18,7 @@
     --accent-color: #555555; 
     --shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
     --card-bg: #ffffff;
-    --header-bg: rgba(255, 255, 255, 0.95);
+    --header-bg: rgba(255, 255, 255, 0.65);
     --border-color: rgba(0,0,0,0.05);
 }
 body.dark-mode {
@@ -26,7 +26,7 @@ body.dark-mode {
     --text-color: #f8fafc;
     --p-color: #94a3b8;
     --card-bg: #111827;
-    --header-bg: rgba(10, 14, 23, 0.95);
+    --header-bg: rgba(10, 14, 23, 0.65);
     --border-color: rgba(255, 255, 255, 0.05);
     --shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
     --main-color: #ffffff;
@@ -109,7 +109,7 @@ html {
     justify-content: space-between;
     align-items: center;
     background: var(--header-bg);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-color);
     z-index: 100;
     transition: background-color 0.3s ease;
@@ -1966,6 +1966,7 @@ body.dark-mode .memory-card-front {
 body.dark-mode .header-logo-img {
     filter: invert(1);
 }
+
 
 
 
