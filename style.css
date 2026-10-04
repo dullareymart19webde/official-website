@@ -12,23 +12,27 @@
     --bg-color: #ffffff; 
     --text-color: #1a1a1a; 
     --p-color: #555555; 
-    --main-color: #0f62fe; 
-    --main-light: #4589ff; 
-    --main-fade: rgba(15, 98, 254, 0.08); 
-    --accent-color: #008296; 
+    --main-color: #000000; 
+    --main-light: #333333; 
+    --main-fade: rgba(0, 0, 0, 0.08); 
+    --accent-color: #555555; 
     --shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
     --card-bg: #ffffff;
     --header-bg: rgba(255, 255, 255, 0.95);
     --border-color: rgba(0,0,0,0.05);
 }
 body.dark-mode {
-    --bg-color: #0a0e17;
+        --bg-color: #0a0e17;
     --text-color: #f8fafc;
     --p-color: #94a3b8;
     --card-bg: #111827;
     --header-bg: rgba(10, 14, 23, 0.95);
     --border-color: rgba(255, 255, 255, 0.05);
     --shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    --main-color: #ffffff;
+    --main-light: #cccccc;
+    --main-fade: rgba(255, 255, 255, 0.1);
+    --accent-color: #aaaaaa;
 }
 body {
     background: var(--bg-color);
@@ -154,8 +158,8 @@ html {
 }
 .tab-link.active {
     background: var(--main-color);
-    color: #fff;
-    box-shadow: 0 5px 15px rgba(15, 98, 254, 0.2);
+    color: var(--bg-color);
+    box-shadow: 0 5px 15px var(--main-fade);
 }
 
 .dropdown-icon {
@@ -249,7 +253,7 @@ body.dark-mode .dropdown-menu {
 
 .dropdown-menu a:hover i {
     background: var(--main-color);
-    color: #fff;
+    color: var(--bg-color);
 }
 .header-right {
     display: flex;
@@ -287,7 +291,7 @@ body.dark-mode .dropdown-menu {
 }
 .btn-outline:hover {
     background: var(--main-color);
-    color: #fff;
+    color: var(--bg-color);
     border-color: var(--main-color);
 }
 .main-content {
@@ -375,14 +379,14 @@ body.dark-mode .dropdown-menu {
 }
 .btn-primary {
     background: var(--main-color);
-    color: #fff;
+    color: var(--bg-color);
     padding: 1.4rem 3rem;
     border-radius: 5rem;
     font-size: 1.5rem;
     font-weight: 600;
     transition: 0.3s;
     cursor: pointer;
-    box-shadow: 0 10px 20px rgba(15, 98, 254, 0.2);
+    box-shadow: 0 10px 20px var(--main-fade);
 }
 .btn-primary:hover {
     transform: translateY(-3px);
@@ -407,9 +411,9 @@ body.dark-mode .dropdown-menu {
     transition: 0.3s;
 }
 .play-btn-box:hover .play-btn {
-    background: var(--main-color); 
-    color: #fff;
-    box-shadow: 0 10px 15px rgba(15, 98, 254, 0.2);
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 10px 15px var(--main-fade);
 }
 .play-btn-box span {
     font-size: 1.5rem;
@@ -518,7 +522,7 @@ body.dark-mode .dropdown-menu {
     bottom: 12%;
     right: -10px;
     background: var(--main-color);
-    color: #fff;
+    color: var(--bg-color);
     padding: 0.8rem 1.8rem;
     border-radius: 5rem;
     font-size: 1.3rem;
@@ -846,7 +850,7 @@ body.dark-mode .cert-img-wrapper {
     bottom: 30px;
     right: 30px;
     background: var(--main-color);
-    color: #fff;
+    color: var(--bg-color);
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -870,10 +874,10 @@ body.dark-mode .cert-img-wrapper {
 
 /* Footer */
 .mega-footer {
-    background: #0a0e17;
-    color: #fff;
+    background: var(--card-bg);
+    color: var(--text-color);
     padding-top: 7rem;
-    border-top: 1px solid rgba(255,255,255,0.05);
+    border-top: 1px solid var(--border-color);
     margin-top: auto;
 }
 .footer-container {
@@ -899,14 +903,14 @@ body.dark-mode .cert-img-wrapper {
 .brand-col .logo {
     font-size: 2.8rem;
     font-weight: 800;
-    color: #fff;
+    color: var(--text-color);
 }
 .brand-col .logo span {
-    color: #0f62fe;
+    color: var(--main-color);
 }
 .brand-col p {
     font-size: 1.5rem;
-    color: #94a3b8;
+    color: var(--p-color);
     line-height: 1.7;
     margin-bottom: 2.5rem;
     max-width: 300px;
@@ -921,14 +925,15 @@ body.dark-mode .cert-img-wrapper {
     align-items: center;
     width: 4rem;
     height: 4rem;
-    background: rgba(255,255,255,0.05);
+    background: var(--main-fade);
     border-radius: 50%;
-    color: #fff;
+    color: var(--text-color);
     font-size: 2rem;
     transition: 0.3s;
 }
 .footer-socials a:hover {
-    background: #0f62fe;
+    background: var(--main-color);
+    color: var(--bg-color);
     transform: translateY(-3px);
 }
 .footer-col ul {
@@ -945,7 +950,7 @@ body.dark-mode .cert-img-wrapper {
     cursor: pointer;
 }
 .footer-col ul li a:hover {
-    color: #0f62fe;
+    color: var(--main-color);
     transform: translateX(5px);
 }
 .contact-col ul li {
@@ -956,7 +961,7 @@ body.dark-mode .cert-img-wrapper {
 }
 .contact-col ul li i {
     font-size: 2rem;
-    color: #0f62fe;
+    color: var(--main-color);
     margin-top: 0.2rem;
 }
 .contact-col ul li span {
@@ -970,7 +975,7 @@ body.dark-mode .cert-img-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid rgba(255,255,255,0.05);
+    border-top: 1px solid var(--border-color);
 }
 .footer-bottom p {
     font-size: 1.4rem;
@@ -1046,7 +1051,7 @@ body.dark-mode .cert-img-wrapper {
 }
 .close-btn:hover {
     background: var(--main-color);
-    color: #fff;
+    color: var(--bg-color);
 }
 .modal-content h2 {
     font-size: 3rem;
@@ -1094,14 +1099,14 @@ body.dark-mode .cert-img-wrapper {
 .brand-col .logo {
     font-size: 2.8rem;
     font-weight: 800;
-    color: #fff;
+    color: var(--text-color);
 }
 .brand-col .logo span {
-    color: #0f62fe;
+    color: var(--main-color);
 }
 .brand-col p {
     font-size: 1.5rem;
-    color: #94a3b8;
+    color: var(--p-color);
     line-height: 1.7;
     margin-bottom: 2.5rem;
     max-width: 300px;
@@ -1116,14 +1121,15 @@ body.dark-mode .cert-img-wrapper {
     align-items: center;
     width: 4rem;
     height: 4rem;
-    background: rgba(255,255,255,0.05);
+    background: var(--main-fade);
     border-radius: 50%;
-    color: #fff;
+    color: var(--text-color);
     font-size: 2rem;
     transition: 0.3s;
 }
 .footer-socials a:hover {
-    background: #0f62fe;
+    background: var(--main-color);
+    color: var(--bg-color);
     transform: translateY(-3px);
 }
 .footer-col ul {
@@ -1140,7 +1146,7 @@ body.dark-mode .cert-img-wrapper {
     cursor: pointer;
 }
 .footer-col ul li a:hover {
-    color: #0f62fe;
+    color: var(--main-color);
     transform: translateX(5px);
 }
 .contact-col ul li {
@@ -1151,7 +1157,7 @@ body.dark-mode .cert-img-wrapper {
 }
 .contact-col ul li i {
     font-size: 2rem;
-    color: #0f62fe;
+    color: var(--main-color);
     margin-top: 0.2rem;
 }
 .contact-col ul li span {
@@ -1165,7 +1171,7 @@ body.dark-mode .cert-img-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid rgba(255,255,255,0.05);
+    border-top: 1px solid var(--border-color);
 }
 .footer-bottom p {
     font-size: 1.4rem;
@@ -1241,7 +1247,7 @@ body.dark-mode .cert-img-wrapper {
 }
 .close-btn:hover {
     background: var(--main-color);
-    color: #fff;
+    color: var(--bg-color);
 }
 .modal-content h2 {
     font-size: 3rem;
@@ -1327,7 +1333,7 @@ body.dark-mode .cert-img-wrapper {
     top: 1rem;
     right: 1rem;
     background: var(--main-color);
-    color: #fff;
+    color: var(--bg-color);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
@@ -1447,7 +1453,7 @@ body.dark-mode .memory-card-front {
 }
 .rps-btn:hover {
     background: var(--main-color);
-    color: #fff;
+    color: var(--bg-color);
     transform: translateY(-5px);
 }
 
@@ -1496,7 +1502,7 @@ body.dark-mode .memory-card-front {
     bottom: 30px;
     right: 30px;
     background: var(--main-color);
-    color: #fff;
+    color: var(--bg-color);
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -1548,7 +1554,7 @@ body.dark-mode .memory-card-front {
     border-radius: 2px;
 }
 .dark-mode .category-heading {
-    text-shadow: 2px 4px 15px rgba(255,255,255,0.05);
+    text-shadow: 2px 4px 15px var(--border-color);
 }
 
 /* Mobile Menu Toggle */
@@ -1725,7 +1731,7 @@ body.dark-mode .memory-card-front {
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
-    background: linear-gradient(135deg, #0f62fe, #00d2ff);
+    background: linear-gradient(135deg, var(--main-color), #00d2ff);
     color: #fff;
     padding: 0.6rem 1.5rem;
     border-radius: 5rem;
@@ -1809,7 +1815,7 @@ body.dark-mode .memory-card-front {
 
 .btn-purchase {
     background: var(--main-color);
-    color: #fff;
+    color: var(--bg-color);
     border: none;
     padding: 1.2rem 2.5rem;
     border-radius: 1rem;
@@ -1945,6 +1951,11 @@ body.dark-mode .memory-card-front {
 .contact-form .input-box {
     gap: 1.5rem;
 }
+
+
+
+
+
 
 
 
