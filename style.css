@@ -530,7 +530,7 @@ body.dark-mode .dropdown-menu {
     display: flex;
     align-items: center;
     gap: 0.6rem;
-    box-shadow: 0 10px 20px rgba(15, 98, 254, 0.4), 0 0 25px rgba(15, 98, 254, 0.6);
+    box-shadow: 0 10px 20px var(--main-fade), 0 0 25px rgba(15, 98, 254, 0.6);
     z-index: 10;
     animation: float 4s ease-in-out infinite;
 }
@@ -858,7 +858,7 @@ body.dark-mode .cert-img-wrapper {
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    box-shadow: 0 10px 20px rgba(15, 98, 254, 0.4);
+    box-shadow: 0 10px 20px var(--main-fade);
     z-index: 1000;
     transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -1717,14 +1717,14 @@ body.dark-mode .memory-card-front {
     top: 1.5rem;
     right: 1.5rem;
     background: linear-gradient(135deg, var(--main-color), var(--main-light));
-    color: #fff;
+    color: var(--bg-color);
     padding: 0.6rem 1.5rem;
     border-radius: 5rem;
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 1px;
     z-index: 10;
-    box-shadow: 0 5px 15px rgba(255, 0, 122, 0.4);
+    box-shadow: 0 5px 15px var(--main-fade);
 }
 
 .badge-ongoing {
@@ -1732,14 +1732,14 @@ body.dark-mode .memory-card-front {
     top: 1.5rem;
     right: 1.5rem;
     background: linear-gradient(135deg, var(--main-color), var(--main-light));
-    color: #fff;
+    color: var(--bg-color);
     padding: 0.6rem 1.5rem;
     border-radius: 5rem;
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 1px;
     z-index: 10;
-    box-shadow: 0 5px 15px rgba(15, 98, 254, 0.4);
+    box-shadow: 0 5px 15px var(--main-fade);
 }
 
 .shop-img-box {
@@ -1832,7 +1832,7 @@ body.dark-mode .memory-card-front {
 .btn-purchase:hover {
     background: var(--accent-color);
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(15, 98, 254, 0.4);
+    box-shadow: 0 8px 20px var(--main-fade);
 }
 
 .btn-purchase i {
@@ -1890,7 +1890,7 @@ body.dark-mode .memory-card-front {
 
 .newsletter-form button:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 25px rgba(15, 98, 254, 0.4);
+    box-shadow: 0 12px 25px var(--main-fade);
 }
 
 .mobile-only { display: none; }
@@ -1966,3 +1966,6 @@ body.dark-mode .memory-card-front {
 body.dark-mode .header-logo-img {
     filter: invert(1);
 }
+
+
+
