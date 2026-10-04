@@ -223,8 +223,8 @@
                     <div class="project-info">
                         <h4>Cafe & Restaurant Pre-Ordering System</h4>
                         <p>An advanced Pre-Ordering System built with Next.js, featuring a beautiful UI for browsing menus, managing cart states, and processing advance orders seamlessly.</p>
-                        <a href="#" target="_blank" class="view-link">
-                            View Details <i class='bx bx-link-external'></i>
+                        <a href="javascript:void(0);" onclick="openModal('project-cafe-modal')" class="view-link">
+                            View Details <i class='bx bx-window-open'></i>
                         </a>
                     </div>
                 </div>
@@ -419,7 +419,19 @@
         </div>
     </footer>
 
-    <!-- Certificate Modals -->
+        <!-- Project Modals -->
+    <div id="project-cafe-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('project-cafe-modal')"><i class='bx bx-x'></i></button>
+            <div class="project-details">
+                <img src="img/cafe-preorder.jpg" alt="Cafe Pre-Ordering System" style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
+                <h2>Cafe & Restaurant Pre-Ordering System</h2>
+                <p>This is a modern, high-performance web application built with Next.js and Tailwind CSS. It is designed to streamline the ordering process for cafes and restaurants.</p>
+                <p>Features include a dynamic menu, responsive cart state management, and an intuitive user interface for seamless advance order processing.</p>
+            </div>
+        </div>
+    </div>
+<!-- Certificate Modals -->
     <div id="cert-devcon-modal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('cert-devcon-modal')"><i class='bx bx-x'></i></button>
@@ -785,6 +797,7 @@
     </script>
 </body>
 </html>
+
 
 
 
