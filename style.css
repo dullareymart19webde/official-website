@@ -80,7 +80,7 @@ html {
     left: -10%;
     width: 40vw;
     height: 40vw;
-    background: linear-gradient(to bottom right, #a8c7fa, var(--main-color));
+    background: linear-gradient(to bottom right, var(--border-color), var(--main-fade));
     animation: float-shape-1 22s ease-in-out infinite;
 }
 .shape-right {
@@ -88,7 +88,7 @@ html {
     right: -5%;
     width: 35vw;
     height: 35vw;
-    background: linear-gradient(to top left, #3ddbd9, var(--main-light));
+    background: linear-gradient(to top left, var(--main-fade), var(--border-color));
     animation: float-shape-2 26s ease-in-out infinite;
 }
 .shape-center {
@@ -96,7 +96,7 @@ html {
     left: 40%;
     width: 25vw;
     height: 25vw;
-    background: linear-gradient(to right, #8a3ffc, #d02670);
+    background: linear-gradient(to right, var(--main-fade), var(--border-color));
     opacity: 0.25;
     animation: float-shape-3 18s ease-in-out infinite;
 }
@@ -499,7 +499,7 @@ body.dark-mode .dropdown-menu {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--main-color), #3ddbd9);
+    background: linear-gradient(135deg, var(--main-color), var(--main-light));
     border-radius: 50% 50% 50% 50% / 60% 40% 70% 30%;
     z-index: 1;
     transform: scale(0.95) translate(-5%, 5%);
@@ -1716,7 +1716,7 @@ body.dark-mode .memory-card-front {
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
-    background: linear-gradient(135deg, #ff007a, #7928ca);
+    background: linear-gradient(135deg, var(--main-color), var(--main-light));
     color: #fff;
     padding: 0.6rem 1.5rem;
     border-radius: 5rem;
@@ -1731,7 +1731,7 @@ body.dark-mode .memory-card-front {
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
-    background: linear-gradient(135deg, var(--main-color), #00d2ff);
+    background: linear-gradient(135deg, var(--main-color), var(--main-light));
     color: #fff;
     padding: 0.6rem 1.5rem;
     border-radius: 5rem;
@@ -1960,3 +1960,9 @@ body.dark-mode .memory-card-front {
 
 
 
+
+
+/* Dark Mode Logo Fix */
+body.dark-mode .header-logo-img {
+    filter: invert(1);
+}
