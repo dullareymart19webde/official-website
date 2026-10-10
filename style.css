@@ -2321,3 +2321,5 @@ body.dark-mode .btn-primary:hover {
         padding: 2rem !important;
     }
 }
+
+.desktop-flex { display: flex; gap: 10px; }
