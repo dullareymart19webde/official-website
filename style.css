@@ -1991,3 +1991,95 @@ body.dark-mode .header-logo-img {
     scrollbar-width: thin;
     scrollbar-color: #475569 var(--bg-color);
 }
+
+/* --- Services Section --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    padding: 0 2rem;
+}
+.service-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 2rem;
+    padding: 4rem 3rem;
+    text-align: center;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px var(--main-fade);
+    border-color: var(--text-color);
+}
+.service-card i {
+    font-size: 5rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+.service-card h3 {
+    font-size: 2.2rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+.service-card p {
+    font-size: 1.5rem;
+    color: var(--p-color);
+    line-height: 1.7;
+}
+
+/* --- FAQ Section --- */
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 2rem;
+}
+.faq-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.faq-item:hover {
+    border-color: var(--text-color);
+}
+.faq-item summary {
+    padding: 2.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    user-select: none;
+}
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+.faq-item summary::after {
+    content: '+';
+    font-size: 2.5rem;
+    font-weight: 400;
+    transition: transform 0.3s ease;
+}
+.faq-item[open] summary::after {
+    transform: rotate(45deg);
+}
+.faq-content {
+    padding: 0 2.5rem 2.5rem 2.5rem;
+    font-size: 1.6rem;
+    color: var(--p-color);
+    line-height: 1.7;
+    border-top: 1px solid var(--border-color);
+    margin-top: -1rem;
+    padding-top: 2rem;
+}
