@@ -438,7 +438,15 @@
                 <p>Thoughts, tutorials, and my journey in software development.</p>
             </div>
             
-            <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+            <div style="position: relative; margin-top: 3rem;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); backdrop-filter: blur(8px); border-radius: 15px;">
+                    <div style="background: var(--card-bg); padding: 1.5rem 3rem; border-radius: 50px; border: 2px solid var(--main-color); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                        <h3 style="color: var(--text-color); font-size: 2rem; margin: 0; display: flex; align-items: center; gap: 10px;">
+                            <i class='bx bx-loader-alt bx-spin' style="color: var(--main-color);"></i> Updating...
+                        </h3>
+                    </div>
+                </div>
+                <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
                 <div class="blog-card" style="background: var(--card-bg); border-radius: 15px; overflow: hidden; border: 1px solid var(--border-color); transition: transform 0.3s; cursor: pointer;">
                     <div style="height: 200px; background: url('img/profile.jpg') center/cover;"></div>
                     <div style="padding: 2rem;">
@@ -468,6 +476,7 @@
                         <a href="javascript:void(0);" style="color: var(--main-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 5px;">Read More <i class='bx bx-right-arrow-alt'></i></a>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
 

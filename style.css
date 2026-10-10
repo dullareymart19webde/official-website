@@ -2132,3 +2132,25 @@ body.dark-mode .header-logo-img {
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
+/* Responsive Fixes for New Features */
+@media (max-width: 768px) {
+    .marquee-track {
+        gap: 2rem !important;
+    }
+    .marquee-item {
+        font-size: 2rem !important;
+    }
+    .marquee-item span {
+        font-size: 1.2rem !important;
+    }
+    .github-stats-section .github-card img {
+        height: auto !important;
+        max-width: 100% !important;
+    }
+    .video-intro {
+        margin: 1rem 0 !important;
+    }
+    .blog-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
