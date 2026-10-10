@@ -1,0 +1,125 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+<meta charset="utf-8">
+<title>Digital Portfolio Client Intake Form</title>
+<style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; }
+    h1 { color: #2c3e50; border-bottom: 2px solid #34495e; padding-bottom: 10px; }
+    h2 { color: #34495e; margin-top: 30px; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+    p { margin-bottom: 10px; }
+    ul { list-style-type: none; padding-left: 0; }
+    li { margin-bottom: 15px; font-weight: bold; }
+    span.blank { font-weight: normal; color: #7f8c8d; font-style: italic; }
+</style>
+</head>
+<body>
+
+<h1>🚀 Digital Portfolio Client Intake Form</h1>
+<p><em>Welcome! To build you a stunning, highly effective digital portfolio, I need to learn a bit more about you, your brand, and your work. Please fill out this document as completely as possible. If you don't have something right now (like a logo), just leave it blank!</em></p>
+
+<h2>1. 👤 Basic Information</h2>
+<p><em>The essentials about who you are.</em></p>
+<ul>
+    <li>Full Name: <br><br><br></li>
+    <li>Preferred Display Name / Brand Name: <span class="blank">(e.g., John Doe, or Vertex Digital)</span><br><br><br></li>
+    <li>Professional Title: <span class="blank">(e.g., Full-Stack Developer, UI/UX Designer)</span><br><br><br></li>
+    <li>Location: <span class="blank">(e.g., Manila, Philippines / Remote)</span><br><br><br></li>
+    <li>Email Address: <br><br><br></li>
+    <li>Phone Number (Optional): <br><br><br></li>
+</ul>
+
+<h2>2. 🎨 Branding & Design Preferences</h2>
+<p><em>How do you want your portfolio to look and feel?</em></p>
+<ul>
+    <li>Do you have an existing logo? <span class="blank">(Yes/No - Please attach high-res files if yes)</span><br><br><br></li>
+    <li>Preferred Color Palette: <span class="blank">(e.g., Monochromatic Black & White, Minimalist, Colorful)</span><br><br><br></li>
+    <li>Vibe / Style: <span class="blank">(e.g., Corporate & Professional, Creative, Sleek & Modern)</span><br><br><br></li>
+    <li>Do you have a profile picture or hero image you want to use? <span class="blank">(Yes/No - Please attach)</span><br><br><br></li>
+</ul>
+
+<h2>3. ✍️ Hero & About Me Sections</h2>
+<p><em>The first thing people will see when they open your site.</em></p>
+<ul>
+    <li>Catchy Headline: <span class="blank">(A short, punchy sentence about what you do)</span><br><br><br></li>
+    <li>Short Intro: <span class="blank">(A brief summary of your value - 1 to 2 sentences)</span><br><br><br></li>
+    <li>Full "About Me" Bio: <span class="blank">(A longer paragraph about your background and journey)</span><br><br><br><br><br></li>
+</ul>
+
+<h2>4. 🛠️ Skills & Expertise</h2>
+<p><em>What tools, languages, and software are you proficient in?</em></p>
+<ul>
+    <li>Core Skills (Top 3-5): <span class="blank">(e.g., Web Design, Mobile App Development)</span><br><br><br></li>
+    <li>Tech Stack / Software: <span class="blank">(e.g., HTML, CSS, JavaScript, Python, Figma)</span><br><br><br></li>
+</ul>
+
+<h2>5. 📂 Projects & Portfolio</h2>
+<p><em>Showcasing your best work. Please provide details for 3 to 6 projects.</em></p>
+
+<h3>Project 1</h3>
+<ul>
+    <li>Project Name: <br><br></li>
+    <li>Short Description: <br><br></li>
+    <li>Role / What you did: <br><br></li>
+    <li>Technologies Used: <br><br></li>
+    <li>Link (Live website or GitHub): <br><br></li>
+    <li>Image/Screenshot: <span class="blank">(Please attach)</span></li>
+</ul>
+
+<h3>Project 2</h3>
+<ul>
+    <li>Project Name: <br><br></li>
+    <li>Short Description: <br><br></li>
+    <li>Role / What you did: <br><br></li>
+    <li>Technologies Used: <br><br></li>
+    <li>Link (Live website or GitHub): <br><br></li>
+    <li>Image/Screenshot: <span class="blank">(Please attach)</span></li>
+</ul>
+<p><em>(Copy and paste for additional projects as needed)</em></p>
+
+<h2>6. 💼 Experience & Education</h2>
+
+<h3>Work Experience (Most recent first)</h3>
+<ul>
+    <li>Job Title: <br><br></li>
+    <li>Company: <br><br></li>
+    <li>Dates: <span class="blank">(e.g., Jan 2022 - Present)</span><br><br></li>
+    <li>Key Responsibilities/Achievements: <br><br><br></li>
+</ul>
+
+<h3>Education</h3>
+<ul>
+    <li>Degree / Course: <br><br></li>
+    <li>School / University: <br><br></li>
+    <li>Year Graduated: <br><br></li>
+</ul>
+
+<h2>7. 📜 Certifications & Awards</h2>
+<ul>
+    <li>Name of Certificate: <br><br></li>
+    <li>Issuer: <span class="blank">(e.g., Google, Coursera)</span><br><br></li>
+    <li>Date Received: <br><br></li>
+    <li>Image of Certificate: <span class="blank">(Please attach)</span></li>
+</ul>
+
+<h2>8. 🔗 Social Media & Links</h2>
+<ul>
+    <li>LinkedIn URL: <br><br></li>
+    <li>GitHub / Behance URL: <br><br></li>
+    <li>Facebook Page URL: <br><br></li>
+    <li>Downloadable Resume/CV: <span class="blank">(Please attach PDF)</span></li>
+</ul>
+
+<hr>
+<h3>📥 Final Checklist for the Client:</h3>
+<p>☐ Answered all required questions.</p>
+<p>☐ Attached Logo (if any).</p>
+<p>☐ Attached Profile/Hero Photo.</p>
+<p>☐ Attached Project Screenshots.</p>
+<p>☐ Attached PDF Resume.</p>
+<p>☐ Attached Certificate Images.</p>
+
+<p><strong>Thank you! Please send this document back to me along with a folder of your images/assets, and I will begin crafting your digital portfolio!</strong></p>
+
+</body>
+</html>
+

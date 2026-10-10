@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertex Digital - Facebook Promo Poster</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #e5e5e5;
+            min-height: 100vh;
+        }
+
+        /* Standard Facebook Post Square: 1080x1080 or 1200x1200. Let's use 1080x1080 for perfect scaling. */
+        .poster {
+            width: 1080px;
+            height: 1080px;
+            background: #0a0e17;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        /* Abstract Background Elements */
+        .bg-shape-1 {
+            position: absolute;
+            top: -20%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .bg-shape-2 {
+            position: absolute;
+            bottom: 0;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* Layout Structure */
+        .content-layer {
+            position: relative;
+            z-index: 10;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-between;
+        }
+
+        /* Header Area */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-box img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            filter: invert(1);
+        }
+
+        .brand-info h1 {
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+
+        .brand-info p {
+            font-size: 14px;
+            color: #ccc;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .badge-top {
+            background: #fff;
+            color: #000;
+            padding: 15px 30px;
+            border-radius: 100px;
+            text-align: right;
+            transform: rotate(3deg);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .badge-top h3 {
+            font-size: 24px;
+            font-weight: 900;
+            margin-bottom: 2px;
+        }
+
+        .badge-top p {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Main Hero Text */
+        .hero-section {
+            display: flex;
+            margin-top: 40px;
+            flex-grow: 1;
+        }
+
+        .hero-left {
+            width: 60%;
+            padding-right: 40px;
+        }
+
+        .pre-title {
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #aaa;
+            margin-bottom: 10px;
+        }
+
+        .main-title {
+            font-size: 85px;
+            font-weight: 900;
+            line-height: 0.95;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .main-title span {
+            color: #aaa;
+        }
+
+        .sub-title {
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 1.4;
+            color: #ddd;
+            margin-bottom: 40px;
+            background: rgba(255,255,255,0.1);
+            padding: 15px 25px;
+            border-left: 5px solid #fff;
+        }
+
+        /* Lists */
+        .perfect-for {
+            background: rgba(255,255,255,0.03);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .perfect-for h4 {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .perfect-for ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .perfect-for li {
+            font-size: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .perfect-for li i {
+            color: #fff;
+            background: #333;
+            padding: 5px;
+            border-radius: 50%;
+            font-size: 14px;
+        }
+
+        /* Mockup Right Side */
+        .hero-right {
+            width: 40%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Abstract Mockup Composition since we don't have exact photos */
+        .mockup-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .mockup-laptop {
+            position: absolute;
+            top: 20%;
+            right: -20px;
+            width: 450px;
+            height: 280px;
+            background: #111;
+            border: 12px solid #333;
+            border-radius: 15px 15px 0 0;
+            border-bottom: 15px solid #444;
+            box-shadow: -15px 20px 30px rgba(0,0,0,0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-image: url('./img/mockup-desktop.png');
+            background-size: cover;
+            background-position: top center;
+        }
+        
+        
+
+        .mockup-phone {
+            position: absolute;
+            bottom: 15%;
+            left: -30px;
+            width: 140px;
+            height: 280px;
+            background: #0a0e17;
+            border: 8px solid #444;
+            border-radius: 25px;
+            box-shadow: -10px 15px 25px rgba(0,0,0,0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            z-index: 2;
+        
+            background-image: url('./img/mockup-mobile.png');
+            background-size: cover;
+            background-position: top center;
+        }
+
+        
+
+        /* Features Grid Bottom */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .feature-box {
+            text-align: center;
+        }
+
+        .feature-box i {
+            font-size: 45px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .feature-box h5 {
+            font-size: 15px;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .feature-box p {
+            font-size: 13px;
+            color: #aaa;
+            line-height: 1.3;
+        }
+
+        /* Footer CTA */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            color: #000;
+            padding: 25px 40px;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+
+        .cta-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .cta-left i {
+            font-size: 50px;
+            color: #000;
+        }
+
+        .cta-text h2 {
+            font-size: 28px;
+            font-weight: 900;
+        }
+
+        .cta-text p {
+            font-size: 16px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        .services-list {
+            display: flex;
+            gap: 20px;
+            font-size: 15px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .services-list span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .services-list i {
+            color: #666;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="poster">
+        <div class="bg-shape-1"></div>
+        <div class="bg-shape-2"></div>
+
+        <div class="content-layer">
+            
+            <!-- HEADER -->
+            <div class="header">
+                <div class="logo-box">
+                    <!-- Using the local logo if present, else fallback -->
+                    <img src="./img/rebranded-logo.png" alt="Logo" onerror="this.src='https://via.placeholder.com/70x70?text=V'">
+                    <div class="brand-info">
+                        <h1>VERTEX DIGITAL</h1>
+                        <p>Your Vision. Our Code.</p>
+                    </div>
+                </div>
+                
+                <div class="badge-top">
+                    <h3>PREMIUM QUALITY</h3>
+                    <p>Big Solutions for Your Business</p>
+                </div>
+            </div>
+
+            <!-- HERO SECTION -->
+            <div class="hero-section">
+                <div class="hero-left">
+                    <div class="pre-title">Professional</div>
+                    <h2 class="main-title">Web Design <br><span>& Application</span> <br>Services</h2>
+                    
+                    <div class="sub-title">
+                        Modern Designs. Powerful Solutions.<br>
+                        Engineered to drive real-world results.
+                    </div>
+
+                    <div class="perfect-for">
+                        <h4>Perfect For:</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Small Businesses</li>
+                            <li><i class="fas fa-check"></i> Startups</li>
+                            <li><i class="fas fa-check"></i> Online Stores</li>
+                            <li><i class="fas fa-check"></i> Organizations</li>
+                            <li><i class="fas fa-check"></i> Personal Brands</li>
+                            <li><i class="fas fa-check"></i> Agencies</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="mockup-container">
+                        <div class="mockup-laptop"></div>
+                        <div class="mockup-phone"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FEATURES GRID -->
+            <div class="features-grid">
+                <div class="feature-box">
+                    <i class="bx bx-desktop"></i>
+                    <h5>Responsive<br>Design</h5>
+                    <p>Looks perfect on all devices & screens.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="bx bx-palette"></i>
+                    <h5>Modern &<br>Attractive</h5>
+                    <p>Clean, creative, and professional UI.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="bx bx-tachometer"></i>
+                    <h5>Fast &<br>Reliable</h5>
+                    <p>Optimized for ultimate performance.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="bx bx-lock-alt"></i>
+                    <h5>Secure &<br>Trusted</h5>
+                    <p>Your data & systems are safe with us.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="bx bx-code-alt"></i>
+                    <h5>Custom<br>Solutions</h5>
+                    <p>Tailored exactly to your business needs.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="bx bx-support"></i>
+                    <h5>Premium<br>Support</h5>
+                    <p>We're here to help you succeed.</p>
+                </div>
+            </div>
+
+            <!-- FOOTER CTA -->
+            <div class="footer">
+                <div class="cta-left">
+                    <i class="bx bxs-message-rounded-dots"></i>
+                    <div class="cta-text">
+                        <h2>MESSAGE US NOW!</h2>
+                        <p>Let's bring your ideas to life online.</p>
+                    </div>
+                </div>
+                
+                <div class="services-list">
+                    <span><i class="bx bx-globe"></i> Websites</span>
+                    <span><i class="bx bx-code-block"></i> Web Apps</span>
+                    <span><i class="bx bx-mobile"></i> Mobile Apps</span>
+                    <span><i class="bx bx-cart"></i> E-Commerce</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
