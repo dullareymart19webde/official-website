@@ -22,43 +22,49 @@
     <div class="bg-shape shape-left"></div>
     <div class="bg-shape shape-right"></div>
     <div class="bg-shape shape-center"></div>
-    <header class="header">
+        <header class="header" style="justify-content: space-between;">
         <div class="header-left">
             <div class="logo-box">
                 <img src="img/rebranded-logo.png" alt="VERTEX logo" class="header-logo-img">
                 <span class="logo">VERTEX<span>.</span></span>
             </div>
-            <nav class="tab-nav">
-                <button class="tab-link active" data-target="home" onclick="switchTab('home', 'Home')">Home</button>
-                <button class="tab-link" data-target="portfolio" onclick="switchTab('portfolio', 'Digital Portfolio')">Portfolio</button>
-                
-                <a href="my-cv.pdf" download class="tab-link mobile-only" style="text-decoration: none;">Download CV</a>
-                <button class="tab-link mobile-only" data-target="contact" onclick="switchTab('contact', 'Contact')">Hire Me</button>
-                <a href="Client_Intake_Form.doc" download class="tab-link mobile-only" style="text-decoration: none; color: var(--accent-color); font-weight: 800;">?? Start a Project</a>
-
-                <div class="dropdown-wrapper">
-                    <button class="tab-link" data-target="projects" onclick="switchTab('projects', 'Projects')">Projects <i class='bx bx-chevron-down dropdown-icon'></i></button>
-                    <div class="dropdown-menu">
-                        <a href="javascript:void(0);" onclick="switchTabAndScroll('projects', 'Projects', 'projects-web')"><i class='bx bx-globe'></i> Web Platforms</a>
-                        <a href="javascript:void(0);" onclick="switchTabAndScroll('projects', 'Projects', 'projects-software')"><i class='bx bx-desktop'></i> Premium Software</a>
-                        <a href="javascript:void(0);" onclick="switchTabAndScroll('projects', 'Projects', 'projects-apps')"><i class='bx bx-mobile'></i> Downloadable Apps</a>
-                    </div>
-                </div>
-
-                <button class="tab-link" data-target="insights" onclick="switchTab('insights', 'Insights')">Insights</button>
-                <button class="tab-link" data-target="contact" onclick="switchTab('contact', 'Contact')">Contact</button>
-            </nav>
         </div>
+
+        <nav class="tab-nav" style="display: flex; align-items: center; background: var(--card-bg); padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid var(--border-color); box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin: 0 auto; gap: 0.5rem;">
+            <button class="tab-link active" data-target="home" onclick="switchTab('home', 'Home')">Home</button>
+            
+            <div class="dropdown-wrapper">
+                <!-- Removed arrow down -->
+                <button class="tab-link" data-target="projects" onclick="switchTab('projects', 'Projects')">Projects</button>
+                <div class="dropdown-menu">
+                    <a href="javascript:void(0);" onclick="switchTabAndScroll('projects', 'Projects', 'projects-web')"><i class='bx bx-globe'></i> Web Platforms</a>
+                    <a href="javascript:void(0);" onclick="switchTabAndScroll('projects', 'Projects', 'projects-software')"><i class='bx bx-desktop'></i> Premium Software</a>
+                    <a href="javascript:void(0);" onclick="switchTabAndScroll('projects', 'Projects', 'projects-apps')"><i class='bx bx-mobile'></i> Downloadable Apps</a>
+                </div>
+            </div>
+
+            <button class="tab-link" data-target="insights" onclick="switchTab('insights', 'Insights')">Insights</button>
+            
+            <!-- Renamed to About the Developer & placed after Insights -->
+            <button class="tab-link" data-target="portfolio" onclick="switchTab('portfolio', 'About the Developer')">About the Developer</button>
+            
+            <button class="tab-link" data-target="contact" onclick="switchTab('contact', 'Contact')">Contact</button>
+
+            <!-- Mobile Only Links -->
+            <a href="my-cv.pdf" download class="tab-link mobile-only">Download CV</a>
+            <button class="tab-link mobile-only" data-target="contact" onclick="switchTab('contact', 'Contact')">Hire Me</button>
+            <a href="Client_Intake_Form.doc" download class="tab-link mobile-only">Start a Project</a>
+        </nav>
         
         <div id="mobile-page-title" class="mobile-page-title">Home</div>
 
-        <div class="header-right">
-            <button id="theme-toggle" class="theme-btn"><i class='bx bx-moon'></i></button>
-            <a href="https://www.facebook.com/profile.php?id=61594969979712" target="_blank" class="social-link"><i class='bx bxl-facebook'></i></a>
-            <a href="mailto:dullareymart19@gmail.com" class="social-link"><i class='bx bx-envelope'></i></a>
-            <a href="my-cv.pdf" download class="btn-outline download-btn">Download CV</a>
-            <a href="javascript:void(0);" onclick="switchTab('contact', 'Contact')" class="btn-outline download-btn">Hire Me</a>
-            <a href="Client_Intake_Form.doc" download class="btn-primary" style="padding: 0.6rem 1.5rem; border-radius: 5rem; margin-left: 10px; font-weight: 700;">Start a Project</a>
+        <div class="header-right" style="display: flex; align-items: center; gap: 15px;">
+            <button id="theme-toggle" class="theme-btn" style="margin: 0;"><i class='bx bx-moon'></i></button>
+            <div class="desktop-only" style="display: flex; gap: 10px;">
+                <a href="my-cv.pdf" download class="btn-outline download-btn" style="padding: 0.6rem 1.5rem; border-radius: 50px;">Download CV</a>
+                <a href="javascript:void(0);" onclick="switchTab('contact', 'Contact')" class="btn-outline download-btn" style="padding: 0.6rem 1.5rem; border-radius: 50px;">Hire Me</a>
+                <a href="Client_Intake_Form.doc" download class="btn-primary" style="padding: 0.6rem 1.5rem; border-radius: 50px; font-weight: 700;">Start a Project</a>
+            </div>
             <button class="menu-toggle" id="menuToggle"><i class='bx bx-menu'></i></button>
         </div>
     </header>
@@ -76,7 +82,7 @@
                     <h1>Engineering Smart <br><span class="text-highlight">Digital Solutions.</span></h1>
                     <p>Combining backend reliability with frontend clarity. I build responsive web platforms, efficient desktop applications, and cross-platform mobile apps tailored for real-world problem-solving.</p>
                     <div class="hero-actions">
-                        <button class="btn-primary" onclick="switchTab('portfolio', 'Digital Portfolio')">Explore Portfolio</button>
+                        <button class="btn-primary" onclick="switchTab('portfolio', 'About the Developer')">About the Developer</button>
                         <div class="play-btn-box" onclick="switchTab('projects', 'Projects')">
                             <div class="play-btn"><i class='bx bx-code-alt'></i></div>
                             <span>Live Projects</span>
@@ -180,10 +186,10 @@
             </div>
         </section>
 
-        <!-- DIGITAL PORTFOLIO TAB -->
+        <!-- ABOUT THE DEVELOPER TAB -->
         <section id="portfolio" class="tab-content">
             <div class="section-header">
-                <h2 class="heading">Digital <span>Portfolio</span></h2>
+                <h2 class="heading">About the <span>Developer</span></h2>
                 <p>A look into my skills and educational background.</p>
             </div>
             <div class="about-grid" id="portfolio-about">
@@ -582,6 +588,101 @@
     </footer>
 
         <!-- Project Modals -->
+        <!-- CASE STUDY MODALS -->
+    <div id="cs-evote-modal" class="modal-overlay">
+        <div class="modal-content" style="max-width: 800px; text-align: left;">
+            <button class="close-btn" onclick="closeModal('cs-evote-modal')"><i class='bx bx-x'></i></button>
+            <div class="project-details">
+                <img src="img/evote.png" alt="E-Vote Case Study" style="width: 100%; border-radius: 12px; margin-bottom: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <span style="color: var(--main-color); font-weight: 700; font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase;">Web Platform</span>
+                <h2 style="font-size: 3rem; margin-top: 5px;">Online Voting System (E-Vote)</h2>
+                
+                <div style="margin-top: 2rem; display: grid; gap: 2rem;">
+                    <div>
+                        <h4 style="font-size: 1.8rem; color: var(--text-color); margin-bottom: 10px;"><i class='bx bx-target-lock' style="color: var(--main-color);"></i> The Problem</h4>
+                        <p style="opacity: 0.8; font-size: 1.5rem; line-height: 1.6;">Traditional voting methods are often prone to human error, lengthy manual counting, and low participation rates due to physical constraints. Organizations needed a secure, remote way to conduct elections transparently.</p>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 1.8rem; color: var(--text-color); margin-bottom: 10px;"><i class='bx bx-bulb' style="color: var(--main-color);"></i> The Solution</h4>
+                        <p style="opacity: 0.8; font-size: 1.5rem; line-height: 1.6;">I architected a full-stack digital voting platform with secure user authentication, real-time dashboard analytics, and encrypted vote casting mechanisms. The system ensures each user can only vote once, maintaining absolute integrity.</p>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 1.8rem; color: var(--text-color); margin-bottom: 10px;"><i class='bx bx-code-block' style="color: var(--main-color);"></i> Technologies Used</h4>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
+                            <span style="background: var(--bg-color); border: 1px solid var(--border-color); padding: 5px 15px; border-radius: 50px; font-size: 1.2rem; font-weight: 600;"><i class='fab fa-php'></i> PHP / MySQL</span>
+                            <span style="background: var(--bg-color); border: 1px solid var(--border-color); padding: 5px 15px; border-radius: 50px; font-size: 1.2rem; font-weight: 600;"><i class='fab fa-js'></i> JavaScript</span>
+                            <span style="background: var(--bg-color); border: 1px solid var(--border-color); padding: 5px 15px; border-radius: 50px; font-size: 1.2rem; font-weight: 600;"><i class='fab fa-css3-alt'></i> Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cs-padmaster-modal" class="modal-overlay">
+        <div class="modal-content" style="max-width: 800px; text-align: left;">
+            <button class="close-btn" onclick="closeModal('cs-padmaster-modal')"><i class='bx bx-x'></i></button>
+            <div class="project-details">
+                <div style="background: linear-gradient(45deg, #1e293b, #0f172a); padding: 4rem 2rem; border-radius: 12px; text-align: center; margin-bottom: 25px;">
+                    <h1 style="color: #fff; font-size: 4rem;">PadMaster <i class='bx bx-cloud' style="color: #60a5fa;"></i></h1>
+                </div>
+                <span style="color: var(--main-color); font-weight: 700; font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase;">Premium Software</span>
+                <h2 style="font-size: 3rem; margin-top: 5px;">PadMaster Cloud Productivity</h2>
+                
+                <div style="margin-top: 2rem; display: grid; gap: 2rem;">
+                    <div>
+                        <h4 style="font-size: 1.8rem; color: var(--text-color); margin-bottom: 10px;"><i class='bx bx-target-lock' style="color: var(--main-color);"></i> The Problem</h4>
+                        <p style="opacity: 0.8; font-size: 1.5rem; line-height: 1.6;">Professionals and students struggle with fragmented notes across different devices. Most free tools lack cross-platform synchronization or feel bloated with unnecessary features.</p>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 1.8rem; color: var(--text-color); margin-bottom: 10px;"><i class='bx bx-bulb' style="color: var(--main-color);"></i> The Solution</h4>
+                        <p style="opacity: 0.8; font-size: 1.5rem; line-height: 1.6;">PadMaster is a meticulously crafted productivity application designed for speed. It features an ultra-responsive UI, seamless cloud synchronization via Firebase, and both a Desktop and Mobile version. Write once, access anywhere.</p>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 1.8rem; color: var(--text-color); margin-bottom: 10px;"><i class='bx bx-code-block' style="color: var(--main-color);"></i> Technologies Used</h4>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
+                            <span style="background: var(--bg-color); border: 1px solid var(--border-color); padding: 5px 15px; border-radius: 50px; font-size: 1.2rem; font-weight: 600;"><i class='bx bxl-flutter'></i> Flutter / Dart</span>
+                            <span style="background: var(--bg-color); border: 1px solid var(--border-color); padding: 5px 15px; border-radius: 50px; font-size: 1.2rem; font-weight: 600;"><i class='fas fa-database'></i> Firebase</span>
+                            <span style="background: var(--bg-color); border: 1px solid var(--border-color); padding: 5px 15px; border-radius: 50px; font-size: 1.2rem; font-weight: 600;"><i class='bx bxl-react'></i> React.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cs-vai-modal" class="modal-overlay">
+        <div class="modal-content" style="max-width: 800px; text-align: left;">
+            <button class="close-btn" onclick="closeModal('cs-vai-modal')"><i class='bx bx-x'></i></button>
+            <div class="project-details">
+                <div style="background: linear-gradient(45deg, #020617, #1e1b4b); padding: 4rem 2rem; border-radius: 12px; text-align: center; margin-bottom: 25px;">
+                    <h1 style="color: #c7d2fe; font-size: 4rem;">V.A.I <i class='bx bx-brain' style="color: #a78bfa;"></i></h1>
+                </div>
+                <span style="color: var(--main-color); font-weight: 700; font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase;">AI Engine</span>
+                <h2 style="font-size: 3rem; margin-top: 5px;">Offline AI Engine (VAI)</h2>
+                
+                <div style="margin-top: 2rem; display: grid; gap: 2rem;">
+                    <div>
+                        <h4 style="font-size: 1.8rem; color: var(--text-color); margin-bottom: 10px;"><i class='bx bx-target-lock' style="color: var(--main-color);"></i> The Problem</h4>
+                        <p style="opacity: 0.8; font-size: 1.5rem; line-height: 1.6;">Modern AI tools require a constant, high-speed internet connection and often compromise user privacy by sending sensitive prompt data to third-party cloud servers.</p>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 1.8rem; color: var(--text-color); margin-bottom: 10px;"><i class='bx bx-bulb' style="color: var(--main-color);"></i> The Solution</h4>
+                        <p style="opacity: 0.8; font-size: 1.5rem; line-height: 1.6;">I engineered a highly optimized, local AI model wrapper that runs inference directly on the user's hardware. It guarantees 100% privacy, zero latency delays from network hops, and works completely offline while delivering intelligent contextual responses.</p>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 1.8rem; color: var(--text-color); margin-bottom: 10px;"><i class='bx bx-code-block' style="color: var(--main-color);"></i> Technologies Used</h4>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
+                            <span style="background: var(--bg-color); border: 1px solid var(--border-color); padding: 5px 15px; border-radius: 50px; font-size: 1.2rem; font-weight: 600;"><i class='fab fa-python'></i> Python</span>
+                            <span style="background: var(--bg-color); border: 1px solid var(--border-color); padding: 5px 15px; border-radius: 50px; font-size: 1.2rem; font-weight: 600;"><i class='bx bx-chip'></i> Local LLM Architecture</span>
+                            <span style="background: var(--bg-color); border: 1px solid var(--border-color); padding: 5px 15px; border-radius: 50px; font-size: 1.2rem; font-weight: 600;"><i class='fab fa-node-js'></i> Electron (UI)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="project-cafe-modal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('project-cafe-modal')"><i class='bx bx-x'></i></button>
@@ -1012,6 +1113,11 @@
     </script>
 </body>
 </html>
+
+
+
+
+
 
 
 
