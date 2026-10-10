@@ -2083,3 +2083,35 @@ body.dark-mode .header-logo-img {
     margin-top: -1rem;
     padding-top: 2rem;
 }
+
+/* Force Footer to be Dark Mode always */
+.mega-footer {
+    background: #0a0e17 !important;
+    color: #ffffff !important;
+    border-top: 1px solid #1e293b !important;
+}
+.mega-footer .logo,
+.mega-footer h3,
+.mega-footer .contact-col ul li span {
+    color: #ffffff !important;
+}
+.mega-footer p, 
+.mega-footer .brand-col p,
+.footer-col ul li a {
+    color: #9ca3af !important;
+}
+.footer-col ul li a:hover {
+    color: var(--accent-color) !important;
+}
+.footer-socials a {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #ffffff !important;
+}
+.footer-socials a:hover {
+    background: var(--accent-color) !important;
+    color: #ffffff !important;
+}
+.footer-bottom {
+    background: #05070a !important;
+    border-top: 1px solid #1e293b !important;
+}
