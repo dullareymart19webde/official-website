@@ -57,18 +57,19 @@ html {
     pointer-events: none;
     background-size: 38px 38px;
     background-image: 
-        linear-gradient(to right, rgba(15, 98, 254, 0.045) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(15, 98, 254, 0.045) 1px, transparent 1px);
+        linear-gradient(to right, rgba(0, 0, 0, 0.038) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.038) 1px, transparent 1px);
     mask-image: radial-gradient(ellipse 85% 70% at 50% 30%, #000 40%, transparent 100%);
     -webkit-mask-image: radial-gradient(ellipse 85% 70% at 50% 30%, #000 40%, transparent 100%);
 }
 
 body.dark-mode .bg-grid-pattern {
     background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.038) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.038) 1px, transparent 1px);
+        linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
 }
 
+/* Autonomous Moving Ambient Aura (Color Matched) */
 .bg-ambient-spotlight {
     position: fixed;
     top: -12vh;
@@ -81,11 +82,11 @@ body.dark-mode .bg-grid-pattern {
     pointer-events: none;
     z-index: 0;
     filter: blur(85px);
-    opacity: 0.65;
+    opacity: 0.6;
     background: radial-gradient(
         ellipse at center,
-        rgba(15, 98, 254, 0.22) 0%,
-        rgba(56, 189, 248, 0.10) 45%,
+        rgba(0, 0, 0, 0.055) 0%,
+        rgba(60, 60, 60, 0.02) 45%,
         transparent 72%
     );
     animation: ambient-aurora-breathe 14s ease-in-out infinite alternate;
@@ -96,8 +97,8 @@ body.dark-mode .bg-ambient-spotlight {
     opacity: 0.8;
     background: radial-gradient(
         ellipse at center,
-        rgba(56, 189, 248, 0.22) 0%,
-        rgba(99, 102, 241, 0.14) 45%,
+        rgba(255, 255, 255, 0.11) 0%,
+        rgba(148, 163, 184, 0.04) 45%,
         transparent 72%
     );
 }
@@ -108,11 +109,11 @@ body.dark-mode .bg-ambient-spotlight {
         opacity: 0.55;
     }
     50% {
-        transform: translateX(-46%) translateY(40px) scale(1.1);
+        transform: translateX(-47%) translateY(35px) scale(1.12);
         opacity: 0.8;
     }
     100% {
-        transform: translateX(-54%) translateY(18px) scale(0.95);
+        transform: translateX(-53%) translateY(16px) scale(0.96);
         opacity: 0.6;
     }
 }
@@ -120,59 +121,77 @@ body.dark-mode .bg-ambient-spotlight {
     position: relative;
     z-index: 1;
 }
+
+/* Autonomous Moving Ambient Gradient Orbs */
 .bg-shape {
     position: fixed; 
     z-index: -1;
-    filter: blur(80px);
-    opacity: 0.35;
+    filter: blur(90px);
     border-radius: 50%;
+    pointer-events: none;
+    will-change: transform;
 }
 
 @keyframes float-shape-1 {
     0% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(8vw, 12vh) scale(1.1); }
-    66% { transform: translate(-4vw, 8vh) scale(0.9); }
+    33% { transform: translate(8vw, 10vh) scale(1.15); }
+    66% { transform: translate(-5vw, 14vh) scale(0.92); }
     100% { transform: translate(0, 0) scale(1); }
 }
 
 @keyframes float-shape-2 {
     0% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(-10vw, -8vh) scale(1.2); }
-    66% { transform: translate(5vw, -12vh) scale(0.85); }
+    33% { transform: translate(-10vw, -8vh) scale(1.18); }
+    66% { transform: translate(6vw, -12vh) scale(0.88); }
     100% { transform: translate(0, 0) scale(1); }
 }
 
 @keyframes float-shape-3 {
     0% { transform: translate(0, 0) scale(1); }
     33% { transform: translate(12vw, -10vh) scale(0.9); }
-    66% { transform: translate(-8vw, 5vh) scale(1.1); }
+    66% { transform: translate(-8vw, 6vh) scale(1.12); }
     100% { transform: translate(0, 0) scale(1); }
 }
 
 .shape-left {
     top: -10%;
     left: -10%;
-    width: 40vw;
-    height: 40vw;
-    background: linear-gradient(to bottom right, var(--border-color), var(--main-fade));
+    width: 42vw;
+    height: 42vw;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.05) 0%, rgba(100, 116, 139, 0.02) 60%, transparent 80%);
+    opacity: 0.75;
     animation: float-shape-1 22s ease-in-out infinite;
 }
 .shape-right {
     bottom: -10%;
     right: -5%;
-    width: 35vw;
-    height: 35vw;
-    background: linear-gradient(to top left, var(--main-fade), var(--border-color));
+    width: 38vw;
+    height: 38vw;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.045) 0%, rgba(71, 85, 105, 0.02) 60%, transparent 80%);
+    opacity: 0.7;
     animation: float-shape-2 26s ease-in-out infinite;
 }
 .shape-center {
     top: 30%;
     left: 40%;
-    width: 25vw;
-    height: 25vw;
-    background: linear-gradient(to right, var(--main-fade), var(--border-color));
-    opacity: 0.25;
+    width: 28vw;
+    height: 28vw;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.04) 0%, rgba(148, 163, 184, 0.015) 60%, transparent 80%);
+    opacity: 0.65;
     animation: float-shape-3 18s ease-in-out infinite;
+}
+
+body.dark-mode .shape-left {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.085) 0%, rgba(148, 163, 184, 0.035) 60%, transparent 80%);
+    opacity: 0.85;
+}
+body.dark-mode .shape-right {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.075) 0%, rgba(100, 116, 139, 0.03) 60%, transparent 80%);
+    opacity: 0.8;
+}
+body.dark-mode .shape-center {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.065) 0%, rgba(148, 163, 184, 0.025) 60%, transparent 80%);
+    opacity: 0.75;
 }
 .header {
     position: sticky;
@@ -2790,7 +2809,7 @@ body.dark-mode .btn-primary:hover {
     border-radius: inherit;
 }
 body:not(.dark-mode) .spotlight-card::before {
-    background: radial-gradient(450px circle at 50% 0%, rgba(15, 98, 254, 0.08), transparent 70%);
+    background: radial-gradient(450px circle at 50% 0%, rgba(0, 0, 0, 0.045), transparent 70%);
 }
 .spotlight-card:hover::before {
     opacity: 1;
