@@ -46,6 +46,19 @@ body {
 html {
     font-size: 62.5%; 
 }
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+.header, .main-content, .mega-footer {
+    position: relative;
+    z-index: 1;
+}
 .bg-shape {
     position: fixed; 
     z-index: -1;
@@ -2630,18 +2643,6 @@ body.dark-mode .btn-primary:hover {
     }
 }
 
-/* 2. Hero Dynamic Typewriter */
-.typewriter-cursor {
-    display: inline-block;
-    color: var(--main-color);
-    font-weight: 300;
-    margin-left: 2px;
-    animation: blink-cursor 0.9s infinite;
-}
-@keyframes blink-cursor {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
 
 /* 3. Interactive Category Filter Bar */
 .project-filter-bar {
