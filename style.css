@@ -2140,6 +2140,88 @@ body.dark-mode .header-logo-img {
     line-height: 1.7;
 }
 
+/* --- Security & Engineering Standards Section --- */
+.security-section {
+    padding: 0 2rem;
+}
+.security-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: var(--main-fade);
+    color: var(--text-color);
+    padding: 0.6rem 1.6rem;
+    border-radius: 5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border: 1px solid var(--border-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.security-badge i {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+.security-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.security-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 2rem;
+    padding: 3.5rem 2.8rem;
+    text-align: left;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+}
+.security-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px var(--main-fade);
+    border-color: var(--text-color);
+}
+.security-icon-box {
+    width: 5.4rem;
+    height: 5.4rem;
+    background: var(--main-fade);
+    border-radius: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+    transition: 0.3s ease;
+}
+.security-card:hover .security-icon-box {
+    background: var(--main-color);
+}
+.security-card:hover .security-icon-box i {
+    color: var(--bg-color);
+}
+.security-icon-box i {
+    font-size: 2.6rem;
+    color: var(--text-color);
+    transition: 0.3s ease;
+}
+.security-card h3 {
+    font-size: 1.9rem;
+    color: var(--text-color);
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+    line-height: 1.3;
+}
+.security-card p {
+    font-size: 1.45rem;
+    color: var(--p-color);
+    line-height: 1.7;
+    flex: 1;
+}
+
 /* --- FAQ Section --- */
 .faq-container {
     max-width: 900px;
@@ -2902,6 +2984,13 @@ body:not(.dark-mode) .spotlight-card::before {
 }
 
 @media (max-width: 768px) {
+    .security-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .security-card {
+        padding: 2.8rem 2.2rem;
+    }
     .project-filter-bar {
         border-radius: 2rem;
         padding: 0.8rem;
