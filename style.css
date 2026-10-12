@@ -46,7 +46,8 @@ body {
 html {
     font-size: 62.5%; 
 }
-#particles-js {
+/* Modern Engineering Blueprint Tech Grid & Ambient Spotlight (Linear/Vercel Aesthetic) */
+.bg-grid-pattern {
     position: fixed;
     top: 0;
     left: 0;
@@ -54,6 +55,44 @@ html {
     height: 100%;
     z-index: 0;
     pointer-events: none;
+    background-size: 38px 38px;
+    background-image: 
+        linear-gradient(to right, rgba(15, 98, 254, 0.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15, 98, 254, 0.045) 1px, transparent 1px);
+    mask-image: radial-gradient(ellipse 85% 70% at 50% 30%, #000 40%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 85% 70% at 50% 30%, #000 40%, transparent 100%);
+}
+
+body.dark-mode .bg-grid-pattern {
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.038) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.038) 1px, transparent 1px);
+}
+
+.bg-ambient-spotlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(
+        650px circle at var(--bg-glow-x, 50%) var(--bg-glow-y, 30%),
+        rgba(15, 98, 254, 0.09),
+        rgba(56, 189, 248, 0.03) 45%,
+        transparent 70%
+    );
+    transition: background 0.1s ease-out;
+}
+
+body.dark-mode .bg-ambient-spotlight {
+    background: radial-gradient(
+        750px circle at var(--bg-glow-x, 50%) var(--bg-glow-y, 30%),
+        rgba(56, 189, 248, 0.12),
+        rgba(99, 102, 241, 0.05) 45%,
+        transparent 70%
+    );
 }
 .header, .main-content, .mega-footer {
     position: relative;
