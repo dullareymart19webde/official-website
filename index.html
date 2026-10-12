@@ -22,7 +22,7 @@
     <div class="bg-shape shape-left"></div>
     <div class="bg-shape shape-right"></div>
     <div class="bg-shape shape-center"></div>
-        <header class="header" style="justify-content: space-between;">
+    <header class="header">
         <div class="header-left">
             <div class="logo-box">
                 <img src="img/rebranded-logo.png" alt="VERTEX logo" class="header-logo-img">
@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <nav class="tab-nav" style="display: flex; align-items: center; background: var(--card-bg); padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid var(--border-color); box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin: 0 auto; gap: 0.5rem;">
+        <nav class="tab-nav">
             <button class="tab-link active" data-target="home" onclick="switchTab('home', 'Home')">Home</button>
             
             <div class="dropdown-wrapper">
@@ -543,19 +543,19 @@
             <div class="footer-col">
                 <h4>About</h4>
                 <ul>
-                    <li><a href="#" onclick="switchTab('portfolio')">My History</a></li>
-                    <li><a href="#" onclick="switchTab('portfolio')">Education</a></li>
-                    <li><a href="#" onclick="switchTab('portfolio')">Tech Stack</a></li>
+                    <li><a href="javascript:void(0);" onclick="switchTab('portfolio', 'About the Developer')">My History</a></li>
+                    <li><a href="javascript:void(0);" onclick="switchTab('portfolio', 'About the Developer')">Education</a></li>
+                    <li><a href="javascript:void(0);" onclick="switchTab('portfolio', 'About the Developer')">Tech Stack</a></li>
                     <li><a href="my-cv.pdf" download>Resume / CV</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Important Links</h4>
                 <ul>
-                    <li><a href="#" onclick="switchTab('websites')">Websites</a></li>
-                    <li><a href="#" onclick="switchTab('apps')">Desktop Apps</a></li>
+                    <li><a href="javascript:void(0);" onclick="switchTabAndScroll('projects', 'Projects', 'projects-web')">Websites</a></li>
+                    <li><a href="javascript:void(0);" onclick="switchTabAndScroll('projects', 'Projects', 'projects-software')">Desktop Apps</a></li>
                     <li><a href="https://github.com/dullareymart19webde" target="_blank">Source Codes</a></li>
-                    <li><a href="javascript:void(0);" onclick="switchTab('portfolio')">Certifications</a></li>
+                    <li><a href="javascript:void(0);" onclick="switchTabAndScroll('portfolio', 'About the Developer', 'portfolio-certs'); toggleCertificates();">Certifications</a></li>
                 </ul>
             </div>
             <div class="footer-col contact-col">
@@ -901,7 +901,23 @@
             for (let i = 0; i < tabLinks.length; i++) {
                 tabLinks[i].classList.remove("active");
             }
-            document.getElementById(tabId).classList.add("active");
+            
+            const targetTab = document.getElementById(tabId);
+            if(targetTab) {
+                targetTab.classList.add("active");
+                
+                // Instantly show all elements in the new tab to avoid IntersectionObserver bugs on hidden elements
+                const animElements = targetTab.querySelectorAll('.animate-on-scroll');
+                animElements.forEach((el, index) => {
+                    setTimeout(() => {
+                        el.classList.add('show');
+                        el.classList.add('visible');
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                    }, index * 30);
+                });
+            }
+
             let targetLink = document.querySelector(`.tab-link[data-target="${tabId}"]`);
             if (targetLink) {
                 targetLink.classList.add("active");
@@ -967,6 +983,9 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('show');
+                    entry.target.classList.add('visible');
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
                     
                     if (entry.target.classList.contains('skill-bar-item')) {
                         const fill = entry.target.querySelector('.skill-progress-fill');
@@ -1029,12 +1048,15 @@
             if (grid.style.display === 'none' || grid.style.display === '') {
                 grid.style.display = 'grid';
                 icon.style.transform = 'rotate(180deg)';
-                // Trigger animation reflow for items
+                // Ensure items are shown
                 const cards = grid.querySelectorAll('.cert-card');
-                cards.forEach(card => {
-                    card.style.animation = 'none';
-                    card.offsetHeight; /* trigger reflow */
-                    card.style.animation = null;
+                cards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.classList.add('show');
+                        card.classList.add('visible');
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, index * 50);
                 });
             } else {
                 grid.style.display = 'none';
