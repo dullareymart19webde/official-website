@@ -78,8 +78,12 @@
         <section id="home" class="tab-content active">
             <div class="home-grid-wrapper">
                 <div class="home-text">
+                    <div class="hero-status-pill">
+                        <span class="status-pulse-dot"></span>
+                        <span>Available for Freelance & Full-Stack Projects</span>
+                    </div>
                     <h3 class="static-intro">Vertex Digital <span class="logo-sub">Software, Web & Mobile App Developer</span></h3>
-                    <h1>Engineering Smart <br><span class="text-highlight">Digital Solutions.</span></h1>
+                    <h1>Engineering Smart <br><span class="text-highlight typewriter-target">Digital Solutions.</span><span class="typewriter-cursor">|</span></h1>
                     <p>Combining backend reliability with frontend clarity. I build responsive web platforms, efficient desktop applications, and cross-platform mobile apps tailored for real-world problem-solving.</p>
                     <div class="hero-actions">
                         <button class="btn-primary" onclick="switchTab('portfolio', 'About the Developer')">About the Developer</button>
@@ -90,7 +94,7 @@
                     </div>
                 </div>
                 <div class="home-hero-comp">
-                    <div class="tech-stack-card">
+                    <div class="tech-stack-card spotlight-card">
                         <h4 class="card-heading">Tech Stack Glance</h4>
                         <div class="tech-icons">
                             <i class="fab fa-python"></i>
@@ -144,17 +148,17 @@
             <div style="margin-top: 8rem;">
                 <h2 class="heading" style="text-align: center; margin-bottom: 3rem; font-size: 4rem;">My <span>Services</span></h2>
                 <div class="services-grid">
-                    <div class="service-card">
+                    <div class="service-card spotlight-card">
                         <i class='bx bx-id-card'></i>
                         <h3>Digital Portfolios</h3>
                         <p>Stand out with a beautifully crafted, high-performance portfolio tailored exactly to your brand.</p>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card spotlight-card">
                         <i class='bx bx-store-alt'></i>
                         <h3>E-Commerce Solutions</h3>
                         <p>Robust and scalable online stores designed to convert visitors into loyal customers.</p>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card spotlight-card">
                         <i class='bx bx-mobile-alt'></i>
                         <h3>Web & Mobile Apps</h3>
                         <p>Cross-platform mobile applications and complex web platforms built for real-world problem solving.</p>
@@ -297,140 +301,162 @@
                 <p>A unified look at my live web platforms, premium software, and upcoming apps.</p>
             </div>
 
-            <!-- Category: Web Platforms -->
-            <div class="category-heading-container" id="projects-web">
-                <h3 class="category-heading">Web Platforms</h3>
+            <!-- Interactive Category Filter Bar -->
+            <div class="project-filter-bar">
+                <button class="filter-btn active" data-filter="all" onclick="filterProjects('all')">
+                    <i class='bx bx-grid-alt'></i> All Projects <span class="filter-count">9</span>
+                </button>
+                <button class="filter-btn" data-filter="web" onclick="filterProjects('web')">
+                    <i class='bx bx-globe'></i> Web Platforms <span class="filter-count">4</span>
+                </button>
+                <button class="filter-btn" data-filter="software" onclick="filterProjects('software')">
+                    <i class='bx bx-desktop'></i> Premium Software <span class="filter-count">2</span>
+                </button>
+                <button class="filter-btn" data-filter="apps" onclick="filterProjects('apps')">
+                    <i class='bx bx-mobile-alt'></i> Downloadable Apps <span class="filter-count">3</span>
+                </button>
             </div>
-            <div class="projects-container" style="margin-bottom: 5rem;">
-                <div class="project-card animate-on-scroll">
-                    <div class="badge-ongoing">ONGOING</div>
-                    <div class="img-wrapper"><img src="img/mts-logo.png" alt="Mindanaw Tribal School" loading="lazy"></div>
-                    <div class="project-info">
-                        <h4>Mindanaw Tribal School (MTS)</h4>
-                        <p>An ongoing web platform developed for the Mindanaw Tribal School, focusing on preserving cultural heritage while providing modern educational resources.</p>
-                        <a href="#" target="_blank" class="view-link">
-                            Visit Live Project <i class='bx bx-link-external'></i>
-                        </a>
-                    </div>
+
+            <!-- Category: Web Platforms -->
+            <div class="project-category-group" data-category="web">
+                <div class="category-heading-container" id="projects-web">
+                    <h3 class="category-heading">Web Platforms</h3>
                 </div>
-                <div class="project-card animate-on-scroll">
-                    <div class="img-wrapper"><img src="img/evote.png" alt="Online Voting System" loading="lazy"></div>
-                    <div class="project-info">
-                        <h4>Online Voting System (E-Vote)</h4>
-                        <p>A secure, fully functional web-based electronic voting platform. Designed to handle user authentication and reliable vote casting.</p>
-                        <a href="http://official-evote.rf.gd" target="_blank" class="view-link">
-                            Visit Live Project <i class='bx bx-link-external'></i>
-                        </a>
+                <div class="projects-container" style="margin-bottom: 5rem;">
+                    <div class="project-card spotlight-card animate-on-scroll">
+                        <div class="badge-ongoing">ONGOING</div>
+                        <div class="img-wrapper"><img src="img/mts-logo.png" alt="Mindanaw Tribal School" loading="lazy"></div>
+                        <div class="project-info">
+                            <h4>Mindanaw Tribal School (MTS)</h4>
+                            <p>An ongoing web platform developed for the Mindanaw Tribal School, focusing on preserving cultural heritage while providing modern educational resources.</p>
+                            <a href="#" target="_blank" class="view-link">
+                                Visit Live Project <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card animate-on-scroll">
-                    <div class="img-wrapper"><img src="img/el-roi.png" alt="El Roi Christian Academy" loading="lazy"></div>
-                    <div class="project-info">
-                        <h4>El Roi Christian Academy (ERCA)</h4>
-                        <p>An official web platform developed for El Roi Christian Academy, providing information on educational programs, admissions, and the latest updates for students and parents.</p>
-                        <a href="http://elroichristianacademy.com" target="_blank" class="view-link">
-                            Visit Live Project <i class='bx bx-link-external'></i>
-                        </a>
+                    <div class="project-card spotlight-card animate-on-scroll">
+                        <div class="img-wrapper"><img src="img/evote.png" alt="Online Voting System" loading="lazy"></div>
+                        <div class="project-info">
+                            <h4>Online Voting System (E-Vote)</h4>
+                            <p>A secure, fully functional web-based electronic voting platform. Designed to handle user authentication and reliable vote casting.</p>
+                            <a href="http://official-evote.rf.gd" target="_blank" class="view-link">
+                                Visit Live Project <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card animate-on-scroll">
-                    <div class="badge-ongoing" style="background: linear-gradient(135deg, var(--accent-color), var(--main-light));">NEW</div>
-                    <div class="img-wrapper" style="background: var(--card-bg); padding: 0;"><img src="img/cafe-preorder.jpg" alt="Cafe Pre-Ordering System" loading="lazy" style="object-fit: cover;"></div>
-                    <div class="project-info">
-                        <h4>Cafe & Restaurant Pre-Ordering System</h4>
-                        <p>An advanced Pre-Ordering System built with Next.js, featuring a beautiful UI for browsing menus, managing cart states, and processing advance orders seamlessly.</p>
-                        <a href="javascript:void(0);" onclick="openModal('project-cafe-modal')" class="view-link">
-                            View Details <i class='bx bx-window-open'></i>
-                        </a>
+                    <div class="project-card spotlight-card animate-on-scroll">
+                        <div class="img-wrapper"><img src="img/el-roi.png" alt="El Roi Christian Academy" loading="lazy"></div>
+                        <div class="project-info">
+                            <h4>El Roi Christian Academy (ERCA)</h4>
+                            <p>An official web platform developed for El Roi Christian Academy, providing information on educational programs, admissions, and the latest updates for students and parents.</p>
+                            <a href="http://elroichristianacademy.com" target="_blank" class="view-link">
+                                Visit Live Project <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card spotlight-card animate-on-scroll">
+                        <div class="badge-ongoing" style="background: linear-gradient(135deg, var(--accent-color), var(--main-light));">NEW</div>
+                        <div class="img-wrapper" style="background: var(--card-bg); padding: 0;"><img src="img/cafe-preorder.jpg" alt="Cafe Pre-Ordering System" loading="lazy" style="object-fit: cover;"></div>
+                        <div class="project-info">
+                            <h4>Cafe & Restaurant Pre-Ordering System</h4>
+                            <p>An advanced Pre-Ordering System built with Next.js, featuring a beautiful UI for browsing menus, managing cart states, and processing advance orders seamlessly.</p>
+                            <a href="javascript:void(0);" onclick="openModal('project-cafe-modal')" class="view-link">
+                                View Details <i class='bx bx-window-open'></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Category: Premium Software -->
-            <div class="category-heading-container" id="projects-software">
-                <h3 class="category-heading">Premium Software</h3>
-            </div>
-            <div class="shop-grid" style="margin-bottom: 5rem;">
-                <!-- Product 1 -->
-                <div class="shop-item animate-on-scroll">
-                    <div class="badge-pro">PRO & MOBILE</div>
-                    <div class="shop-content" style="padding-top: 4.5rem;">
-                        <h3 class="shop-title">PadMaster</h3>
-                        <p class="shop-desc">A robust, cloud-powered productivity application. Access your workspace from anywhere via the Web Edition or take it on the go with the cross-platform Mobile Edition featuring seamless synchronization.</p>
+            <div class="project-category-group" data-category="software">
+                <div class="category-heading-container" id="projects-software">
+                    <h3 class="category-heading">Premium Software</h3>
+                </div>
+                <div class="shop-grid" style="margin-bottom: 5rem;">
+                    <!-- Product 1 -->
+                    <div class="shop-item spotlight-card animate-on-scroll">
+                        <div class="badge-pro">PRO & MOBILE</div>
+                        <div class="shop-content" style="padding-top: 4.5rem;">
+                            <h3 class="shop-title">PadMaster</h3>
+                            <p class="shop-desc">A robust, cloud-powered productivity application. Access your workspace from anywhere via the Web Edition or take it on the go with the cross-platform Mobile Edition featuring seamless synchronization.</p>
 
-                        <div class="shop-footer">
-                            <div class="shop-price">Inquire<span></span></div>
-                            <button class="btn-purchase" onclick="purchaseInquiry('PadMaster')">
-                                <i class='bx bx-cart-add'></i> Contact Me
-                            </button>
+                            <div class="shop-footer">
+                                <div class="shop-price">Inquire<span></span></div>
+                                <button class="btn-purchase" onclick="purchaseInquiry('PadMaster')">
+                                    <i class='bx bx-cart-add'></i> Contact Me
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Product 2 -->
-                <div class="shop-item animate-on-scroll">
-                    <div class="badge-pro">AI ENGINE</div>
-                    <div class="shop-content" style="padding-top: 4.5rem;">
-                        <h3 class="shop-title">Offline AI Engine (VAI)</h3>
-                        <p class="shop-desc">A powerful, privacy-first Artificial Intelligence agent that runs entirely on your local machine. Lightning-fast responses and advanced data processing without needing an internet connection.</p>
+                    <!-- Product 2 -->
+                    <div class="shop-item spotlight-card animate-on-scroll">
+                        <div class="badge-pro">AI ENGINE</div>
+                        <div class="shop-content" style="padding-top: 4.5rem;">
+                            <h3 class="shop-title">Offline AI Engine (VAI)</h3>
+                            <p class="shop-desc">A powerful, privacy-first Artificial Intelligence agent that runs entirely on your local machine. Lightning-fast responses and advanced data processing without needing an internet connection.</p>
 
-                        <div class="shop-footer">
-                            <div class="shop-price">Inquire<span></span></div>
-                            <button class="btn-purchase" onclick="purchaseInquiry('Offline AI Engine (VAI)')">
-                                <i class='bx bx-cart-add'></i> Contact Me
-                            </button>
+                            <div class="shop-footer">
+                                <div class="shop-price">Inquire<span></span></div>
+                                <button class="btn-purchase" onclick="purchaseInquiry('Offline AI Engine (VAI)')">
+                                    <i class='bx bx-cart-add'></i> Contact Me
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Category: Downloadable Apps -->
-            <div class="category-heading-container" id="projects-apps">
-                <h3 class="category-heading">Downloadable Apps</h3>
-            </div>
-            <div class="shop-grid" style="margin-bottom: 3rem;">
-                <!-- Product 1: dexTer -->
-                <div class="shop-item animate-on-scroll">
-                    <div class="badge-pro">ONLINE AI</div>
-                    <div class="shop-img-box" style="padding: 2rem; background: var(--bg-color);">
-                        <img src="img/dexter_logo.png" alt="dexTer (Online AI)" loading="lazy" style="object-fit: contain; width: 100%; height: 100%; border-radius: 22.5%; box-shadow: var(--shadow);">
-                    </div>
-                    <div class="shop-content">
-                        <h3 class="shop-title">dexTer (Online AI)</h3>
-                        <p class="shop-desc">A smart online AI companion designed for complex tasks and quick answers.</p>
-                        <a href="https://www.mediafire.com/file/7enzkcjvcoiu1d9/Dexter_by_Rey_Mart_Dulla.apk/file" target="_blank" class="btn-primary" style="margin-top: 1.5rem; display: block; text-align: center; border-radius: 8px;">
-                            <i class='bx bx-download'></i> Download APK
-                        </a>
-                    </div>
+            <div class="project-category-group" data-category="apps">
+                <div class="category-heading-container" id="projects-apps">
+                    <h3 class="category-heading">Downloadable Apps</h3>
                 </div>
+                <div class="shop-grid" style="margin-bottom: 3rem;">
+                    <!-- Product 1: dexTer -->
+                    <div class="shop-item spotlight-card animate-on-scroll">
+                        <div class="badge-pro">ONLINE AI</div>
+                        <div class="shop-img-box" style="padding: 2rem; background: var(--bg-color);">
+                            <img src="img/dexter_logo.png" alt="dexTer (Online AI)" loading="lazy" style="object-fit: contain; width: 100%; height: 100%; border-radius: 22.5%; box-shadow: var(--shadow);">
+                        </div>
+                        <div class="shop-content">
+                            <h3 class="shop-title">dexTer (Online AI)</h3>
+                            <p class="shop-desc">A smart online AI companion designed for complex tasks and quick answers.</p>
+                            <a href="https://www.mediafire.com/file/7enzkcjvcoiu1d9/Dexter_by_Rey_Mart_Dulla.apk/file" target="_blank" class="btn-primary" style="margin-top: 1.5rem; display: block; text-align: center; border-radius: 8px;">
+                                <i class='bx bx-download'></i> Download APK
+                            </a>
+                        </div>
+                    </div>
 
-                <!-- Product 2: Chatbuddy -->
-                <div class="shop-item animate-on-scroll">
-                    <div class="badge-pro">OFFLINE AI</div>
-                    <div class="shop-img-box" style="padding: 2rem; background: var(--bg-color);">
-                        <img src="img/Chatbuddy_logo_nobg.png" alt="Chatbuddy (Offline AI)" loading="lazy" style="object-fit: contain; width: 100%; height: 100%; border-radius: 22.5%; box-shadow: var(--shadow);">
+                    <!-- Product 2: Chatbuddy -->
+                    <div class="shop-item spotlight-card animate-on-scroll">
+                        <div class="badge-pro">OFFLINE AI</div>
+                        <div class="shop-img-box" style="padding: 2rem; background: var(--bg-color);">
+                            <img src="img/Chatbuddy_logo_nobg.png" alt="Chatbuddy (Offline AI)" loading="lazy" style="object-fit: contain; width: 100%; height: 100%; border-radius: 22.5%; box-shadow: var(--shadow);">
+                        </div>
+                        <div class="shop-content">
+                            <h3 class="shop-title">Chatbuddy (Offline AI)</h3>
+                            <p class="shop-desc">Your reliable offline AI assistant. Fast and always available without an internet connection.</p>
+                            <a href="https://www.mediafire.com/file/sfsu7b8q8u95v06/Chatbuddy_Offline_AI.apk/file" target="_blank" class="btn-primary" style="margin-top: 1.5rem; display: block; text-align: center; border-radius: 8px;">
+                                <i class='bx bx-download'></i> Download APK
+                            </a>
+                        </div>
                     </div>
-                    <div class="shop-content">
-                        <h3 class="shop-title">Chatbuddy (Offline AI)</h3>
-                        <p class="shop-desc">Your reliable offline AI assistant. Fast and always available without an internet connection.</p>
-                        <a href="https://www.mediafire.com/file/sfsu7b8q8u95v06/Chatbuddy_Offline_AI.apk/file" target="_blank" class="btn-primary" style="margin-top: 1.5rem; display: block; text-align: center; border-radius: 8px;">
-                            <i class='bx bx-download'></i> Download APK
-                        </a>
-                    </div>
-                </div>
 
-                <!-- Product 3: Atmos AI -->
-                <div class="shop-item animate-on-scroll">
-                    <div class="badge-pro">AI ENGINE</div>
-                    <div class="shop-img-box" style="padding: 2rem; background: var(--bg-color);">
-                        <img src="img/atmos_logo_nobg.png" alt="Atmos AI" loading="lazy" style="object-fit: contain; width: 100%; height: 100%; border-radius: 22.5%; box-shadow: var(--shadow);">
-                    </div>
-                    <div class="shop-content">
-                        <h3 class="shop-title">Atmos AI</h3>
-                        <p class="shop-desc">An advanced AI application designed for optimal performance and intelligent processing.</p>
-                        <a href="https://www.mediafire.com/file/0p3dyner7td3kiw/Atmos_AI.apk/file" target="_blank" class="btn-primary" style="margin-top: 1.5rem; display: block; text-align: center; border-radius: 8px;">
-                            <i class='bx bx-download'></i> Download APK
-                        </a>
+                    <!-- Product 3: Atmos AI -->
+                    <div class="shop-item spotlight-card animate-on-scroll">
+                        <div class="badge-pro">AI ENGINE</div>
+                        <div class="shop-img-box" style="padding: 2rem; background: var(--bg-color);">
+                            <img src="img/atmos_logo_nobg.png" alt="Atmos AI" loading="lazy" style="object-fit: contain; width: 100%; height: 100%; border-radius: 22.5%; box-shadow: var(--shadow);">
+                        </div>
+                        <div class="shop-content">
+                            <h3 class="shop-title">Atmos AI</h3>
+                            <p class="shop-desc">An advanced AI application designed for optimal performance and intelligent processing.</p>
+                            <a href="https://www.mediafire.com/file/0p3dyner7td3kiw/Atmos_AI.apk/file" target="_blank" class="btn-primary" style="margin-top: 1.5rem; display: block; text-align: center; border-radius: 8px;">
+                                <i class='bx bx-download'></i> Download APK
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -877,6 +903,11 @@
         function switchTabAndScroll(tabId, tabTitle, targetSectionId) {
             switchTab(tabId, tabTitle);
             
+            // Sync with project category filters if applicable
+            if (targetSectionId === 'projects-web') filterProjects('web');
+            else if (targetSectionId === 'projects-software') filterProjects('software');
+            else if (targetSectionId === 'projects-apps') filterProjects('apps');
+            
             // Wait for tab transition, then scroll
             setTimeout(() => {
                 const targetElement = document.getElementById(targetSectionId);
@@ -1011,9 +1042,128 @@
             observer.observe(el);
         });
 
-        // --- AJAX Contact Form Submission ---
+        // --- Interactive Project Filtering ---
+        function filterProjects(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-filter') === category) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            const groups = document.querySelectorAll('.project-category-group');
+            groups.forEach(group => {
+                if (category === 'all' || group.getAttribute('data-category') === category) {
+                    group.classList.remove('hidden-category');
+                } else {
+                    group.classList.add('hidden-category');
+                }
+            });
+        }
+
+        // --- Hero Dynamic Typewriter Effect ---
+        const typewriterPhrases = [
+            "Digital Solutions.",
+            "Web Platforms.",
+            "Flutter Mobile Apps.",
+            "Offline AI Tools.",
+            "Desktop Software."
+        ];
+        let phraseIndex = 0;
+        let charIndex = typewriterPhrases[0].length;
+        let isDeleting = false;
+        const typewriterEl = document.querySelector('.typewriter-target');
+
+        function typeLoop() {
+            if (!typewriterEl) return;
+            const currentPhrase = typewriterPhrases[phraseIndex];
+            
+            if (isDeleting) {
+                charIndex--;
+                typewriterEl.textContent = currentPhrase.substring(0, charIndex);
+            } else {
+                charIndex++;
+                typewriterEl.textContent = currentPhrase.substring(0, charIndex);
+            }
+
+            let typeSpeed = isDeleting ? 40 : 85;
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                typeSpeed = 2200; // Pause on complete phrase
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % typewriterPhrases.length;
+                typeSpeed = 400; // Pause before typing next
+            }
+
+            setTimeout(typeLoop, typeSpeed);
+        }
+
+        if (typewriterEl) {
+            setTimeout(typeLoop, 1500);
+        }
+
+        // --- Card Spotlight Mouse Hover Glow (Linear / Vercel style) ---
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.spotlight-card');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    card.style.setProperty('--mouse-x', `${x}px`);
+                    card.style.setProperty('--mouse-y', `${y}px`);
+                }
+            });
+        });
+
+        // --- Toast Notification Manager ---
+        function showToast({ title, message, type = 'success', actionText, actionUrl = 'Client_Intake_Form.doc' }) {
+            let container = document.getElementById('toastContainer');
+            if (!container) {
+                container = document.createElement('div');
+                container.id = 'toastContainer';
+                container.className = 'toast-container';
+                document.body.appendChild(container);
+            }
+
+            const toast = document.createElement('div');
+            toast.className = `toast-card toast-${type}`;
+            
+            const iconHtml = type === 'success' 
+                ? "<i class='bx bx-check-circle toast-icon'></i>"
+                : "<i class='bx bx-error-circle toast-icon'></i>";
+
+            let actionHtml = '';
+            if (actionText) {
+                actionHtml = `<a href="${actionUrl}" download class="toast-action-btn"><i class='bx bxs-file-doc'></i> ${actionText}</a>`;
+            }
+
+            toast.innerHTML = `
+                ${iconHtml}
+                <div class="toast-body">
+                    <div class="toast-title">${title}</div>
+                    <div class="toast-desc">${message}</div>
+                    ${actionHtml}
+                </div>
+                <button class="toast-close" onclick="this.parentElement.remove()">&times;</button>
+            `;
+
+            container.appendChild(toast);
+            
+            setTimeout(() => toast.classList.add('show'), 50);
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 400);
+            }, 6000);
+        }
+
+        // --- AJAX Contact Form Submission with Toast Feedback ---
         const contactForm = document.getElementById('contactForm');
-        const formMessage = document.getElementById('formMessage');
         const submitBtn = document.getElementById('submitBtn');
 
         if (contactForm) {
@@ -1030,17 +1180,27 @@
                 })
                 .then(response => {
                     if (response.ok) {
-                        formMessage.innerText = 'Thank you! Your message has been sent successfully.';
-                        formMessage.className = 'success';
                         contactForm.reset();
+                        showToast({
+                            title: 'Message Sent Successfully! 🎉',
+                            message: 'Thank you for reaching out. I typically respond to all inquiries within 24 hours.',
+                            type: 'success',
+                            actionText: 'Download Client Intake Form'
+                        });
                     } else {
-                        formMessage.innerText = 'Oops! There was a problem submitting your form.';
-                        formMessage.className = 'error';
+                        showToast({
+                            title: 'Submission Issue',
+                            message: 'Could not send via server. Please contact directly at reymartdulla17@gmail.com',
+                            type: 'error'
+                        });
                     }
                 })
                 .catch(error => {
-                    formMessage.innerText = 'Oops! There was a problem submitting your form.';
-                    formMessage.className = 'error';
+                    showToast({
+                        title: 'Submission Failed',
+                        message: 'Network error. Please email directly at reymartdulla17@gmail.com',
+                        type: 'error'
+                    });
                 })
                 .finally(() => {
                     submitBtn.innerText = 'Send Message';
@@ -1139,6 +1299,7 @@
             }
         }
     </script>
+    <div id="toastContainer" class="toast-container"></div>
 </body>
 </html>
 
