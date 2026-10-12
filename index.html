@@ -1067,29 +1067,7 @@
         }
 
 
-        // --- Ambient Background & Card Spotlight Tracking (Linear / Vercel style) ---
-        let bgGlowTicking = false;
-        document.addEventListener('mousemove', (e) => {
-            if (!bgGlowTicking) {
-                window.requestAnimationFrame(() => {
-                    document.documentElement.style.setProperty('--bg-glow-x', `${e.clientX}px`);
-                    document.documentElement.style.setProperty('--bg-glow-y', `${e.clientY}px`);
-                    bgGlowTicking = false;
-                });
-                bgGlowTicking = true;
-            }
 
-            const cards = document.querySelectorAll('.spotlight-card');
-            cards.forEach(card => {
-                const rect = card.getBoundingClientRect();
-                if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
-                    card.style.setProperty('--mouse-x', `${x}px`);
-                    card.style.setProperty('--mouse-y', `${y}px`);
-                }
-            });
-        }, { passive: true });
 
         // --- Toast Notification Manager ---
         function showToast({ title, message, type = 'success', actionText, actionUrl = 'Client_Intake_Form.doc' }) {
