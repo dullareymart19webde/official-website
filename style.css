@@ -2134,6 +2134,87 @@ body.dark-mode .header-logo-img {
 }
 
 
+/* --- High-End Tech Stack Marquee / Ticker --- */
+.tech-marquee-wrapper {
+    margin: 6rem 0 3.5rem;
+    padding: 2.2rem 0;
+    background: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.tech-marquee-wrapper:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+.marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    width: max-content;
+    animation: scroll-marquee 32s linear infinite;
+    will-change: transform;
+}
+
+.marquee-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1rem 2.2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: 100px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+    cursor: default;
+    user-select: none;
+}
+
+body.dark-mode .marquee-item {
+    background: rgba(255, 255, 255, 0.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.marquee-item:hover {
+    transform: translateY(-4px) scale(1.05);
+    background: var(--card-bg);
+    border-color: var(--main-color);
+    box-shadow: 0 10px 25px var(--main-fade), 0 0 15px rgba(255, 255, 255, 0.08);
+}
+
+.marquee-item i {
+    font-size: 2.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+.marquee-item:hover i {
+    transform: scale(1.15) rotate(4deg);
+}
+
+.marquee-item span {
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: var(--text-color);
+    letter-spacing: 0.3px;
+    transition: color 0.3s ease;
+}
+
+.marquee-item:hover span {
+    color: var(--main-color);
+}
+
 @keyframes scroll-marquee {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
@@ -2151,14 +2232,25 @@ body.dark-mode .header-logo-img {
 
 /* Responsive Fixes for New Features */
 @media (max-width: 768px) {
+    .tech-marquee-wrapper {
+        margin: 4rem 0 2rem;
+        padding: 1.6rem 0;
+        mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    }
     .marquee-track {
-        gap: 2rem !important;
+        gap: 1.4rem !important;
+        animation-duration: 25s !important;
     }
     .marquee-item {
-        font-size: 2rem !important;
+        padding: 0.8rem 1.5rem !important;
+        gap: 0.8rem !important;
+    }
+    .marquee-item i {
+        font-size: 1.9rem !important;
     }
     .marquee-item span {
-        font-size: 1.2rem !important;
+        font-size: 1.25rem !important;
     }
     .github-stats-section .github-card img {
         height: auto !important;
