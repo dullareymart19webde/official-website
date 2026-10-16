@@ -364,10 +364,10 @@
             <!-- Interactive Category Filter Bar -->
             <div class="project-filter-bar">
                 <button class="filter-btn active" data-filter="all" onclick="filterProjects('all')">
-                    <i class='bx bx-grid-alt'></i> All Projects <span class="filter-count">9</span>
+                    <i class='bx bx-grid-alt'></i> All Projects <span class="filter-count">10</span>
                 </button>
                 <button class="filter-btn" data-filter="web" onclick="filterProjects('web')">
-                    <i class='bx bx-globe'></i> Web Platforms <span class="filter-count">4</span>
+                    <i class='bx bx-globe'></i> Web Platforms <span class="filter-count">5</span>
                 </button>
                 <button class="filter-btn" data-filter="software" onclick="filterProjects('software')">
                     <i class='bx bx-desktop'></i> Premium Software <span class="filter-count">2</span>
@@ -383,6 +383,22 @@
                     <h3 class="category-heading">Web Platforms</h3>
                 </div>
                 <div class="projects-container" style="margin-bottom: 5rem;">
+                    <div class="project-card spotlight-card animate-on-scroll">
+                        <div class="badge-ongoing" style="background: linear-gradient(135deg, #4f46e5, #7c3aed);">AI PLATFORM</div>
+                        <div class="img-wrapper" style="background: var(--card-bg); padding: 0;"><img src="img/dexter-web.jpg" alt="Dexter AI Assistant" loading="lazy" style="object-fit: cover;"></div>
+                        <div class="project-info">
+                            <h4>Dexter AI – Intelligent Workspace Assistant</h4>
+                            <p>Next-Gen Multimodal AI companion powered by Gemini 2.5 Flash & Firebase. Features multi-turn chat memory, vision analysis, live web search, code sandbox runner, voice input & TTS, KaTeX math, and Mermaid diagrams.</p>
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 1rem;">
+                                <a href="https://dexter-ai-phi.vercel.app" target="_blank" class="view-link" style="margin-top: 0;">
+                                    Live Web App <i class='bx bx-link-external'></i>
+                                </a>
+                                <a href="javascript:void(0);" onclick="openModal('project-dexter-modal')" class="view-link" style="margin-top: 0;">
+                                    View Details <i class='bx bx-window-open'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="project-card spotlight-card animate-on-scroll">
                         <div class="badge-ongoing">ONGOING</div>
                         <div class="img-wrapper"><img src="img/mts-logo.png" alt="Mindanaw Tribal School" loading="lazy"></div>
@@ -476,16 +492,21 @@
                 <div class="shop-grid" style="margin-bottom: 3rem;">
                     <!-- Product 1: dexTer -->
                     <div class="shop-item spotlight-card animate-on-scroll">
-                        <div class="badge-pro">ONLINE AI</div>
-                        <div class="shop-img-box" style="padding: 2rem; background: var(--bg-color);">
-                            <img src="img/dexter_logo.png" alt="dexTer (Online AI)" loading="lazy" style="object-fit: contain; width: 100%; height: 100%; border-radius: 22.5%; box-shadow: var(--shadow);">
+                        <div class="badge-pro" style="background: linear-gradient(135deg, #4f46e5, #7c3aed);">AI WEB & APK</div>
+                        <div class="shop-img-box" style="padding: 1.5rem; background: var(--bg-color);">
+                            <img src="img/dexter-web.jpg" alt="Dexter AI Assistant" loading="lazy" style="object-fit: cover; width: 100%; height: 100%; border-radius: 22.5%; box-shadow: var(--shadow);">
                         </div>
                         <div class="shop-content">
-                            <h3 class="shop-title">dexTer (Online AI)</h3>
-                            <p class="shop-desc">A smart online AI companion designed for complex tasks and quick answers.</p>
-                            <a href="https://www.mediafire.com/file/7enzkcjvcoiu1d9/Dexter_by_Rey_Mart_Dulla.apk/file" target="_blank" class="btn-primary" style="margin-top: 1.5rem; display: block; text-align: center; border-radius: 8px;">
-                                <i class='bx bx-download'></i> Download APK
-                            </a>
+                            <h3 class="shop-title">Dexter (AI Assistant)</h3>
+                            <p class="shop-desc">Next-Gen Intelligent Workspace Companion with Gemini 2.5 Flash, Multimodal Vision, and Voice. Try the live web platform or download the Android APK.</p>
+                            <div style="display: flex; gap: 8px; flex-direction: column; margin-top: 1.2rem;">
+                                <a href="https://dexter-ai-phi.vercel.app" target="_blank" class="btn-primary" style="display: block; text-align: center; border-radius: 8px;">
+                                    <i class='bx bx-globe'></i> Launch Web App
+                                </a>
+                                <a href="https://www.mediafire.com/file/7enzkcjvcoiu1d9/Dexter_by_Rey_Mart_Dulla.apk/file" target="_blank" class="btn-outline" style="display: block; text-align: center; border-radius: 8px; padding: 0.6rem 1rem; font-size: 0.85rem;">
+                                    <i class='bx bx-download'></i> Download APK
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -783,6 +804,41 @@
                 <h2>Cafe & Restaurant Pre-Ordering System</h2>
                 <p>This is a modern, high-performance web application built with Next.js and Tailwind CSS. It is designed to streamline the ordering process for cafes and restaurants.</p>
                 <p>Features include a dynamic menu, responsive cart state management, and an intuitive user interface for seamless advance order processing.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dexter AI Assistant Modal -->
+    <div id="project-dexter-modal" class="modal-overlay">
+        <div class="modal-content" style="max-width: 650px;">
+            <button class="close-btn" onclick="closeModal('project-dexter-modal')"><i class='bx bx-x'></i></button>
+            <div class="project-details">
+                <img src="img/dexter-web.jpg" alt="Dexter AI Assistant" style="width: 100%; max-height: 280px; object-fit: cover; border-radius: 12px; margin-bottom: 20px;">
+                <h2>Dexter AI – Intelligent Workspace Companion</h2>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 15px;">
+                    <span style="font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; background: rgba(79, 70, 229, 0.15); color: #818cf8; border: 1px solid rgba(79, 70, 229, 0.3);">Gemini 2.5 Flash</span>
+                    <span style="font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3);">Firebase Firestore</span>
+                    <span style="font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3);">Tailwind CSS</span>
+                    <span style="font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3);">Vite PWA</span>
+                </div>
+                <p>Dexter AI is a next-generation workspace companion designed for developers, researchers, and creators. Engineered with modern web standards, it provides real-time multimodal intelligence (images, audio, documents, and code files) powered by Google Gemini 2.5 Flash.</p>
+                <p style="margin-top: 10px;"><strong>Key Capabilities:</strong></p>
+                <ul style="padding-left: 20px; margin-bottom: 15px; line-height: 1.8; color: var(--p-color);">
+                    <li><strong>Real-Time Session Memory:</strong> Cloud Firestore synchronization with search, pin-to-top, and chat renaming.</li>
+                    <li><strong>Google Search Grounding:</strong> Live web search capability seamlessly integrated into AI responses.</li>
+                    <li><strong>Live Code Sandbox:</strong> In-browser executable HTML/SVG/JavaScript preview runner.</li>
+                    <li><strong>Math & Visual Notation:</strong> KaTeX mathematical rendering and Mermaid.js flowcharts.</li>
+                    <li><strong>Voice Input & Custom TTS:</strong> Web Speech API voice dictation and customized text-to-speech with speed control.</li>
+                    <li><strong>Mobile-Optimized Architecture:</strong> Smooth animations, collapsible sidebar drawer, dark/light theme, and markdown export.</li>
+                </ul>
+                <div style="display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap;">
+                    <a href="https://dexter-ai-phi.vercel.app" target="_blank" class="btn-primary" style="display: inline-flex; align-items: center; gap: 8px; padding: 0.7rem 1.6rem; border-radius: 50px;">
+                        <i class='bx bx-globe'></i> Launch Web App
+                    </a>
+                    <a href="https://github.com/dullareymart19webde/dexter-web-ai" target="_blank" class="btn-outline" style="display: inline-flex; align-items: center; gap: 8px; padding: 0.7rem 1.6rem; border-radius: 50px;">
+                        <i class='bx bxl-github'></i> GitHub Source
+                    </a>
+                </div>
             </div>
         </div>
     </div>
